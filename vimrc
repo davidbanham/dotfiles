@@ -13,3 +13,6 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set ttyfast
+if has("syntax")
+      syntax on
+  endif
