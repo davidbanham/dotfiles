@@ -16,3 +16,4 @@ set ttyfast
 if has("syntax")
       syntax on
   endif
+set pastetoggle=<F3>
