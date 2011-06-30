@@ -17,3 +17,8 @@ if has("syntax")
       syntax on
   endif
 set pastetoggle=<F3>
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
