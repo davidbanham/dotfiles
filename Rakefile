@@ -30,6 +30,12 @@ task :install do
       link_file(file)
     end
   end
+	Dir['./vim/bundle/*'].each do |file|
+		out = `git submodule sync #{file}`
+		puts out
+		out = `git submodule update #{file}`
+		puts out
+	end
 end
 
 def replace_file(file)
