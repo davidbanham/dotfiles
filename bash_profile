@@ -15,6 +15,7 @@ alias oscar='ssh oscar.oiminc.com.au'
 alias bert='ssh bert.oiminc.com.au'
 alias count='ssh count.oiminc.com.au'
 alias kermit='ssh kermit.oiminc.com.au'
+alias pinion='ssh pinionco@pinion.co'
 
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 
@@ -26,4 +27,6 @@ alias updatedb='sudo /usr/libexec/locate.updatedb'
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-export PATH=${PATH}:/usr/bin/android-sdk-mac/tools/
+export PATH=$PATH:/usr/bin/android-sdk-mac/tools/
+
+export PATH=/usr/local/git/bin:$PATH 
