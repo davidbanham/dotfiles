@@ -22,4 +22,6 @@ set pastetoggle=<F3>
 nmap <leader>l :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+if has('mac')
+	set listchars=tab:▸\ ,eol:¬
+endif
