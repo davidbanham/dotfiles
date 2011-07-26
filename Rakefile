@@ -33,7 +33,7 @@ task :install do
 	Dir['./vim/bundle/*'].each do |file|
 		out = `git submodule sync #{file}`
 		puts out
-		out = `git submodule update #{file}`
+		out = `git submodule update --init #{file}`
 		puts out
 	end
 end
