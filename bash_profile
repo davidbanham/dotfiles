@@ -5,6 +5,7 @@ fi
 
 alias list='cat /Users/davidbanham/.bash_profile'
 alias tunnel='ssh -D 8080 sirbabau@dbanham.com'
+alias officetunnel='ssh -D 8080 kermit.pinion.gg'
 alias office='ssh -p 2200 l4dserver@office.oiminc.com.au'
 alias dbanham='ssh sirbabau@dbanham.com'
 alias dbe='ssh babau@dbe.cc'
