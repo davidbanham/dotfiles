@@ -8,7 +8,7 @@ $(function () {
     names.push("Crnr Mail");
     favicons.push("http://crnr.com.au/crnrfavicon.png");
     names.push("Pinion Mail");
-    favicons.push("http://oscar.pinion.co/gears.svg");
+    favicons.push("http://pinion.gg/pinionlogo.png");
 
     var splitTitle = document.title.split(" - ");
 
