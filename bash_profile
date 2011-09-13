@@ -36,3 +36,5 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$PATH:/usr/bin/android-sdk-mac/tools/
 
 export PATH=/usr/local/git/bin:$PATH 
+
+export PATH=$PATH:/Users/davidbanham/node_modules/.bin/
