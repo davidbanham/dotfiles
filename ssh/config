@@ -8,3 +8,11 @@ Host kermit
 	HostName kermit.pinion.gg
 Host server
 	HostName home.dbe.cc
+Host wtfref.no.de
+  Port 21980
+  User node
+  ForwardAgent yes
+Host pinionchat.no.de
+  Port 19813
+  User node
+  ForwardAgent yes
