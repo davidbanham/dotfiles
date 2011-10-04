@@ -30,7 +30,7 @@ alias updatedb='sudo /usr/libexec/locate.updatedb'
 ##
 
 # MacPorts Installer addition on 2010-12-26_at_22:30:13: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 export PATH=$PATH:/usr/bin/android-sdk-mac/tools/
@@ -38,3 +38,5 @@ export PATH=$PATH:/usr/bin/android-sdk-mac/tools/
 export PATH=/usr/local/git/bin:$PATH 
 
 export PATH=$PATH:/Users/davidbanham/node_modules/.bin/
+
+export PATH=$PATH:/Users/davidbanham/bin/
