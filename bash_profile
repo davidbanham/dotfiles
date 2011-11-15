@@ -40,3 +40,5 @@ export PATH=/usr/local/git/bin:$PATH
 export PATH=$PATH:/Users/davidbanham/node_modules/.bin/
 
 export PATH=$PATH:/Users/davidbanham/bin/
+
+export PATH=$PATH:/home/davidbanham/.bin/

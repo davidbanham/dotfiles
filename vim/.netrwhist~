@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/davidbanham/hnymn/views'
+let g:netrw_dirhist_2='/Users/davidbanham/oim-cpanel-adder'
+let g:netrw_dirhist_3='/Users/davidbanham/oim-cpanel-adder/conf'

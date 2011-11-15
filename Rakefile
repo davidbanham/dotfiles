@@ -14,6 +14,12 @@ task :install do
 		out = `git submodule update --init #{file}`
 		puts out
 	end
+	Dir['./bin/*'].each do |file|
+		out = `git submodule sync #{file}`
+		puts out
+		out = `git submodule update --init #{file}`
+		puts out
+	end
 	Dir['ssh/*'].each do |file|
 		file_logic(file)
 	end
