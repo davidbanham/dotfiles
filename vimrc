@@ -59,3 +59,6 @@ augroup JumpCursorOnEdit
  \ unlet b:doopenfold |
  \ endif
 augroup END
+
+" Resize splits when the window is resized
+    au VimResized * exe "normal! \<c-w>="
