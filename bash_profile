@@ -41,4 +41,7 @@ export PATH=$PATH:/Users/davidbanham/node_modules/.bin/
 
 export PATH=$PATH:/Users/davidbanham/bin/
 
-export PATH=$PATH:/home/davidbanham/.bin/
+export PATH=$PATH:/Users/davidbanham/.bin/
+
+# Line to enable Node Version Manager - https://github.com/creationix/nvm
+. ~/.nvm/nvm.sh
