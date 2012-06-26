@@ -3,24 +3,14 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-alias list='cat /Users/davidbanham/.bash_profile'
+alias list='cat /Users/davidbanham/.bash_profile | grep alias'
 alias tunnel='ssh -D 8080 sirbabau@dbanham.com'
 alias officetunnel='ssh -D 8080 kermit.pinion.gg'
-alias office='ssh -p 2200 l4dserver@office.oiminc.com.au'
 alias dbanham='ssh sirbabau@dbanham.com'
 alias dbe='ssh babau@dbe.cc'
-alias delivery='ssh delivery.oiminc.com.au'
 alias server='ssh home.dbe.cc'
-alias ranking='ssh 111.67.2.170'
-alias voip='ssh voip.crnr.com.au'
-alias ernie='ssh ernie.oiminc.com.au'
-alias hypernia='ssh 203.217.24.12'
-alias proto='ssh vps.oiminc.com.au'
-alias bigbird='ssh bigbird.oiminc.com.au'
-alias oscar='ssh oscar.oiminc.com.au'
-alias bert='ssh bert.oiminc.com.au'
-alias count='ssh count.oiminc.com.au'
-alias kermit='ssh kermit.oiminc.com.au'
+alias oscar='ssh oscar.pinion.gg'
+alias kermit='ssh kermit.pinion.gg'
 alias pinion='ssh pinionco@pinion.co'
 
 alias updatedb='sudo /usr/libexec/locate.updatedb'
@@ -45,3 +35,12 @@ export PATH=$PATH:/Users/davidbanham/.bin/
 
 # Line to enable Node Version Manager - https://github.com/creationix/nvm
 . ~/.nvm/nvm.sh
+
+# {{{
+# Node Completion - Auto-generated, do not touch.
+shopt -s progcomp
+for f in $(command ls ~/.node-completion); do
+  f="$HOME/.node-completion/$f"
+  test -f "$f" && . "$f"
+done
+# }}}
