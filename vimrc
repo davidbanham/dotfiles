@@ -65,3 +65,6 @@ augroup END
 " Resize splits when the window is resized
     au VimResized * exe "normal! \<c-w>="
 command Prettyjson :%!python -m json.tool
+
+syn sync minlines=200
+syn sync fromstart
