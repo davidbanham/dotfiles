@@ -46,3 +46,5 @@ done
 # }}}
 
 PS1="✩ "
+
+alias pyserv='python -m SimpleHTTPServer'
