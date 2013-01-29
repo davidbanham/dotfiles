@@ -1,0 +1,2 @@
+Host *
+ForwardX11 yes
