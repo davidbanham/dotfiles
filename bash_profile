@@ -45,6 +45,14 @@ for f in $(command ls ~/.node-completion); do
 done
 # }}}
 
-PS1="✩ "
+function _update_ps1() {
+	if [[ `hostname -s` = Corduroy ]]; then
+		PS1="✩ "
+	else
+		PS1="✮ "
+	fi
+}
+
+export PROMPT_COMMAND="_update_ps1"
 
 alias pyserv='python -m SimpleHTTPServer'
