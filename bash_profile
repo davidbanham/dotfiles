@@ -6,12 +6,6 @@ fi
 alias list='cat /Users/davidbanham/.bash_profile | grep alias'
 alias tunnel='ssh -D 8080 sirbabau@dbanham.com'
 alias officetunnel='ssh -D 8080 kermit.pinion.gg'
-alias dbanham='ssh sirbabau@dbanham.com'
-alias dbe='ssh babau@dbe.cc'
-alias server='ssh home.dbe.cc'
-alias oscar='ssh oscar.pinion.gg'
-alias kermit='ssh kermit.pinion.gg'
-alias pinion='ssh pinionco@pinion.co'
 
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 
