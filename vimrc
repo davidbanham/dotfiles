@@ -12,7 +12,7 @@ set showmode " always show the current mode
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set noexpandtab
+set expandtab
 autocmd FileType coffee
 	\ setlocal expandtab
 set ttyfast
@@ -26,6 +26,7 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 if has('mac')
 	set listchars=tab:▸\ ,eol:¬
+	set list
 endif
 
 " Tell vim to remember certain things when we exit
