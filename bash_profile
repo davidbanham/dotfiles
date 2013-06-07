@@ -9,6 +9,8 @@ alias officetunnel='ssh -D 8080 kermit.pinion.gg'
 
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 
+title() { "$HOME/.bin/title.sh" "$@" ;}
+
 ##
 # Your previous /Users/davidbanham/.bash_profile file was backed up as /Users/davidbanham/.bash_profile.macports-saved_2010-12-26_at_22:30:13
 ##
