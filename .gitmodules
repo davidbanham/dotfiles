@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-literate-coffeescript"]
 	path = vim/bundle/vim-literate-coffeescript
 	url = https://github.com/mintplant/vim-literate-coffeescript.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown
