@@ -1,3 +1,4 @@
+let g:instant_markdown_slow = 1
 "pathogen
 filetype off
 call pathogen#runtime_append_all_bundles()
