@@ -14,3 +14,9 @@ excludesfile = /opt/boxen/config/git/gitignore
 
 [credential]
 helper = /opt/boxen/bin/boxen-git-credential
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[push]
+	default = simple
