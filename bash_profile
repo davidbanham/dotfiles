@@ -7,6 +7,8 @@ alias list='cat /Users/davidbanham/.bash_profile | grep alias'
 alias tunnel='ssh -D 8080 sirbabau@dbanham.com'
 alias officetunnel='ssh -D 8080 kermit.pinion.gg'
 
+alias shuttle='sshuttle --dns -vvr bork.pinion.gg 0/0'
+
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 
 title() { "$HOME/.bin/title.sh" "$@" ;}
