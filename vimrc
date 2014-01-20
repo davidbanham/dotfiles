@@ -70,3 +70,9 @@ command Prettyjson :%!python -m json.tool
 
 syn sync minlines=200
 syn sync fromstart
+
+filetype off
+filetype plugin indent off
+set runtimepath+=/usr/local/go/misc/vim
+filetype plugin indent on
+map \ i

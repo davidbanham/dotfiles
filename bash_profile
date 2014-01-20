@@ -54,3 +54,9 @@ function _update_ps1() {
 export PROMPT_COMMAND="_update_ps1"
 
 alias pyserv='python -m SimpleHTTPServer'
+
+export GOPATH=/Users/davidbanham/go
+export GOBIN=/Users/davidbanham/go/bin
+export PATH=$PATH:$GOPATH/bin
+
+alias gorun='go run ./*.go'
