@@ -1,0 +1,10 @@
+#!/opt/boxen/nodenv/shims/coffee
+
+#Depends on a global installation of nesh.
+#npm install -g nesh
+
+{spawn} = require 'child_process'
+path = require 'path'
+json = require path.join process.cwd(), "#{process.argv[2]}"
+args = ['-c', '-e', "j = #{JSON.stringify json}"]
+spawn 'nesh', args, stdio: 'inherit'
