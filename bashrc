@@ -103,3 +103,5 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 export EDITOR=/usr/bin/vim
 source /opt/boxen/env.sh
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
