@@ -76,3 +76,4 @@ filetype plugin indent off
 set runtimepath+=/usr/local/go/misc/vim
 filetype plugin indent on
 map \ i
+cmap w!! %!sudo tee > /dev/null %
