@@ -1,0 +1,4 @@
+#!/bin/bash
+NAME="t$1"
+git branch $NAME
+git checkout $NAME
