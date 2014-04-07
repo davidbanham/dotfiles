@@ -82,3 +82,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 highlight clear SignColumn
 cmap w!! %!sudo tee > /dev/null %
+
+augroup ProjectSetup
+  au BufRead,BufEnter /Users/davidbanham/repos/thinkmill/* setlocal noexpandtab
+augroup END
