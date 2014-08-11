@@ -5,6 +5,5 @@
 
 {spawn} = require 'child_process'
 path = require 'path'
-json = require path.join process.cwd(), "#{process.argv[2]}"
-args = ['-c', '-e', "j = #{JSON.stringify json}"]
+args = ['-c', '-e', "j = require('#{path.join process.cwd(), process.argv[2]}')"]
 spawn 'nesh', args, stdio: 'inherit'
