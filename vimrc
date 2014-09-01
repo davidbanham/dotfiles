@@ -84,5 +84,5 @@ highlight clear SignColumn
 cmap w!! %!sudo tee > /dev/null %
 
 augroup ProjectSetup
-  au BufRead,BufEnter /Users/davidbanham/repos/thinkmill/* setlocal noexpandtab
+  au BufRead,BufEnter /Users/davidbanham/repos/thinkmill/*.js setlocal noexpandtab
 augroup END
