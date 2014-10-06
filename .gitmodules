@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-obsession"]
 	path = vim/bundle/vim-obsession
 	url = https://github.com/tpope/vim-obsession
+[submodule "vim/bundle/tern_for_vim"]
+	path = vim/bundle/tern_for_vim
+	url = https://github.com/marijnh/tern_for_vim
