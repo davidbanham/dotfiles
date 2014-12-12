@@ -89,3 +89,5 @@ augroup END
 
 set exrc            " enable per-directory .vimrc files
 set secure          " disable unsafe commands in local .vimrc files
+
+set backspace=indent,eol,start
