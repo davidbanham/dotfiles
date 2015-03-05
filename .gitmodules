@@ -49,3 +49,6 @@
 [submodule "vim/bundle/tern_for_vim"]
 	path = vim/bundle/tern_for_vim
 	url = https://github.com/marijnh/tern_for_vim
+[submodule "vim/bundle/vim-livedown"]
+	path = vim/bundle/vim-livedown
+	url = git://github.com/shime/vim-livedown.git

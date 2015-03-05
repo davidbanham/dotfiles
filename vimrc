@@ -1,4 +1,6 @@
-let g:instant_markdown_slow = 1
+let g:livedown_autorun = 1
+let g:livedown_open = 1
+let g:livedown_port = 1337
 "pathogen
 filetype off
 call pathogen#runtime_append_all_bundles()
