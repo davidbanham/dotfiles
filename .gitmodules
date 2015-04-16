@@ -52,3 +52,6 @@
 [submodule "vim/bundle/vim-livedown"]
 	path = vim/bundle/vim-livedown
 	url = git://github.com/shime/vim-livedown.git
+[submodule "vim/bundle/vim-yaml"]
+	path = vim/bundle/vim-yaml
+	url = https://github.com/Raimondi/vim-yaml
