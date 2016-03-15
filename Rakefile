@@ -29,9 +29,6 @@ task :install do
 		out = `git submodule update --init #{file}`
 		puts out
 	end
-	Dir['js/*'].each do |file|
-		file_logic(file)
-	end
 end
 def file_logic(file)
 	replace_all = false
