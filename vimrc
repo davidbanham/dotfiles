@@ -1,13 +1,40 @@
+" Vundle vimrc
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin('~/.config/nvim/bundle')
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+let g:ycm_confirm_extra_conf = 0 
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-obsession'
+Plugin 'shime/vim-livedown'
+Plugin 'Raimondi/vim-yaml'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'lambdatoast/elm.vim'
+" End configuration, makes the plugins available
+call vundle#end()
+filetype plugin indent on
+
 let g:livedown_autorun = 1
 let g:livedown_open = 1
 let g:livedown_port = 1337
-"pathogen
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags() "call this when installing new plugins
-filetype plugin on
-filetype plugin indent on
-set nocompatible " sets to vim not vi
+
 set number " show line numbers
 hi LineNr term=bold cterm=NONE ctermfg=LightGrey ctermbg=NONE gui=NONE guifg=LightGrey guibg=NONE
 nnoremap <F2> :set nonumber!<CR>
