@@ -23,4 +23,5 @@ main = do
         , resource =? "mail.google.com__mail_u_1" --> doShift "4:email"
         , manageDocks
         ]
+      , layoutHook = avoidStruts $ layoutHook defaultConfig
       }
