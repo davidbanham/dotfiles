@@ -3,6 +3,7 @@ import XMonad.Util.Run(spawnPipe)
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 import XMonad.Hooks.ManageDocks
+import XMonad.Util.EZConfig
 
 main = do
 
@@ -25,3 +26,6 @@ main = do
         ]
       , layoutHook = avoidStruts $ layoutHook defaultConfig
       }
+      `additionalKeys`
+      [ ((mod4Mask, xK_w ), spawn "google-chrome")
+      ]
