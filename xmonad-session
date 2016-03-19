@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -r ".xmonad/xmonad-session-rc" ]
+then
+  . .xmonad/xmonad-session-rc
+fi
+
+exec trayer --edge top --align right --widthtype percent --width 25 --height 25 --transparent true --tint 0x000000 --monitor primary --SetDockType true --SetPartialStrut true --expand true &
+exec nm-applet &
+exec blueman-applet &
+exec redshift-gtk &
+exec xmonad "$@"
