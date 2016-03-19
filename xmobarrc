@@ -1,4 +1,4 @@
-Config { font = "xft:Ubuntu Mono-14"
+Config { font = "xft:Source Code Pro"
        , additionalFonts = []
        , borderColor = "black"
        , border = TopB
