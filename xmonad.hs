@@ -7,8 +7,8 @@ import XMonad.Hooks.ManageDocks
 main = do
 
   xmproc <- spawnPipe "/usr/bin/xmobar"
-  xmonad defaultConfig
-      { terminal    = "gnome-terminal"
+  xmonad $ defaultConfig {
+      terminal    = "gnome-terminal"
       , modMask     = mod4Mask
       , borderWidth = 1
       , focusFollowsMouse  = True
