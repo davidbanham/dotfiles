@@ -14,7 +14,7 @@ main = do
       , borderWidth = 1
       , focusFollowsMouse  = True
       , workspaces = [
-        "1:code", "2:www", "3:comms", "4:email", "5:overflow", "6", "7", "8", "9"
+        "1:code", "2:www", "3:comms", "4:email", "5:harvest", "6:enpass", "7", "8", "9"
       ]
       , manageHook = composeAll
         [ resource =? "crx_bikioccmkafdpakkkcpdbppfkghcmihk" --> doShift "3:comms"
@@ -22,6 +22,7 @@ main = do
         , className =? "Slack" --> doShift "3:comms"
         , resource =?"mail.google.com__mail_u_0" --> doShift "4:email"
         , resource =? "mail.google.com__mail_u_1" --> doShift "4:email"
+        , resource =? "prismatik.harvestapp.com__time" --> doShift "5:harvest"
         , manageDocks
         ]
       , layoutHook = avoidStruts $ layoutHook defaultConfig
