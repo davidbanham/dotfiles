@@ -21,7 +21,7 @@ main = do
         , resource =? "crx_nckgahadagoaajjgafhacjanaoiihapd" --> doShift "3:comms"
         , resource =? "prismatik.slack.com" --> doShift "3:comms"
         , className =? "Slack" --> doShift "3:comms"
-        , resource =?"mail.google.com__mail_u_0" --> doShift "4:email"
+        , resource =? "mail.google.com__mail_u_0" --> doShift "4:email"
         , resource =? "mail.google.com__mail_u_1" --> doShift "4:email"
         , resource =? "prismatik.harvestapp.com__time" --> doShift "5:harvest"
         , manageDocks
