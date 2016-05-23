@@ -6,14 +6,6 @@
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 
-[hub]
-protocol = https
-
-[core]
-excludesfile = /opt/boxen/config/git/gitignore
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
 [merge]
 	tool = vimdiff
 [diff]
