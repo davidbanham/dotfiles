@@ -6,5 +6,4 @@ xcalib .icc_profiles/Dell_XPS15_9550_UHD_Touch__7PHPT_LQ156D1_.icm &
 /opt/google/chrome/google-chrome --new-window --app=https://mail.google.com/mail/u/0/\#inbox &
 /opt/google/chrome/google-chrome --new-window --app=https://prismatik.harvestapp.com/time &
 /opt/google/chrome/google-chrome --new-window --app=https://prismatik.slack.com &
-/opt/google/chrome/google-chrome --new-window --app=https://www.flowdock.com/app/prismatik &
 btsync &
