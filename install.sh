@@ -4,5 +4,9 @@ for i in $( ls ); do
   then
     continue
   fi
+  if [ $i = "README.md" ]
+  then
+    continue
+  fi
   stow $i -t ~
 done
