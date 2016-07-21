@@ -27,6 +27,7 @@ Plugin 'shime/vim-livedown'
 Plugin 'Raimondi/vim-yaml'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'fatih/vim-go'
 " End configuration, makes the plugins available
 call vundle#end()
 filetype plugin indent on
