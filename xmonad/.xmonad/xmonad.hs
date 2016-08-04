@@ -33,7 +33,7 @@ main = do
       , layoutHook = avoidStruts $ layoutHook defaultConfig
       }
       `additionalKeys`
-      [ ((mod4Mask, xK_w ), spawn "google-chrome"),
+      [ ((mod4Mask, xK_s ), spawn "google-chrome"),
         ((0, 0x1008ff13 ), raiseVolume 4 >> return ()),
         ((0, 0x1008ff11 ), lowerVolume 4 >> return ()),
         ((0, 0x1008ff12 ), spawn "amixer -D pulse set Master 1+ toggle"    >> return ()),
