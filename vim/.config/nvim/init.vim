@@ -28,6 +28,8 @@ Plugin 'Raimondi/vim-yaml'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/syntastic'
 " End configuration, makes the plugins available
 call vundle#end()
 filetype plugin indent on
@@ -127,3 +129,5 @@ au BufNewFile,BufRead *.tag set filetype=html
 au BufNewFile,BufRead *.md set spell spelllang=en_au
 set mouse=
 hi Search ctermbg=Black
+
+let g:rustfmt_autosave = 1
