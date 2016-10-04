@@ -85,6 +85,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias settings=unity-control-center
+alias mutt-personal="mutt -F ~/.muttrc-personal"
+alias mutt-prismatik="mutt -F ~/.muttrc-prismatik"
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 
