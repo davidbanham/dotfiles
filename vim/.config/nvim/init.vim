@@ -1,37 +1,24 @@
-" Vundle vimrc
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-"
-let g:ycm_confirm_extra_conf = 0 
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'suan/vim-instant-markdown'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'tpope/vim-obsession'
-Plugin 'shime/vim-livedown'
-Plugin 'Raimondi/vim-yaml'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ElmCast/elm-vim'
-Plugin 'fatih/vim-go'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/syntastic'
-" End configuration, makes the plugins available
-call vundle#end()
+call plug#begin('~/.config/nvim/plugged')
+Plug 'Valloric/YouCompleteMe'
+Plug 'airblade/vim-gitgutter'
+Plug 'digitaltoad/vim-jade'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'suan/vim-instant-markdown'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-obsession'
+Plug 'shime/vim-livedown'
+Plug 'Raimondi/vim-yaml'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ElmCast/elm-vim'
+Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/syntastic'
+Plug 'jceb/vim-orgmode'
+Plug 'vimwiki/vimwiki' , { 'branch': 'dev' }
+Plug 'SirVer/ultisnips'
+Plug 'tbabej/taskwiki'
+call plug#end()
 filetype plugin indent on
 
 let g:livedown_autorun = 1
