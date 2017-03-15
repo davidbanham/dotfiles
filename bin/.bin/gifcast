@@ -1,0 +1,5 @@
+#!/bin/bash
+rm /tmp/screencast.mkv
+ffcast -s rec /tmp/screencast.mkv
+docker run -it --rm -v /tmp:/data maxogden/gifify screencast.mkv -o screencast.gif
+image_to_clip /tmp/screencast.gif
