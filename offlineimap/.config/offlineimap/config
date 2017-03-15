@@ -1,0 +1,31 @@
+[general]
+pythonfile = /home/davidbanham/.config/offlineimap/get_pass.py
+#, Personal
+accounts = Personal
+
+[Account Personal]
+localrepository = Local
+remoterepository = Remote
+
+[Account Prismatik]
+localrepository = PrismatikLocal
+remoterepository = PrismatikRemote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Mail/Personal
+
+[Repository Remote]
+type = Gmail
+remoteuser = david@banham.id.au
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remotepasseval = get_pw()
+
+[Repository PrismatikLocal]
+type = Maildir
+localfolders = ~/Mail/Prismatik
+
+[Repository PrismatikRemote]
+type = Gmail
+remoteuser = david@prismatik.com.au
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
