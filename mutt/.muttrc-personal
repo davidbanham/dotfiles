@@ -1,0 +1,80 @@
+#
+#  ~/.mutt/muttrc-gmail
+#
+# Setup for incoming mail:
+#
+set imap_user   =   "david@banham.id.au"
+set folder      =   "imaps://$imap_user@imap.gmail.com/"
+set spoolfile   =   "+INBOX"
+#
+# Password chicanery
+#
+set my_pass=`keybase decrypt -i ~/.sec/pass.gpg 2> /dev/null | awk '/gmailPersonal/ {print $2}'`
+set imap_pass=$my_pass
+set smtp_pass=$my_pass
+#
+# Reduce polling frequency to a sane level
+#
+set mail_check  =   900       # check for new mail every 900 seconds
+# And poll the current mailbox more often (not needed with IDLE in post 1.5.11)
+set timeout     =   15           # after 15 secs of no keypresses, start checking for new mail
+#
+#---------------------------------
+#
+##
+#  header_cache: keep a cache of headers for faster loading
+## set header_cache=~/mutt/cache/headers -- needs mutt built with +headercache
+##
+set header_cache=~/mutt/cache/headers-personal
+set message_cachedir    =   ~/mutt/cache/bodies-personal
+set imap_idle
+set imap_check_subscribed
+unset imap_list_subscribed
+set imap_peek
+set imap_servernoise
+## http://www.rdrop.com/docs/mutt/manual166.html
+## imap_delim_chars
+## Type: string
+## Default: "/."
+## This contains the list of characters which you would like to treat as
+## folder separators for displaying IMAP paths. In particular it helps in
+## using the '=' shortcut for your folder variable.
+## set imap_delim_chars="/." # This makes mutt read label a.b.c as a/b/c ??
+## re imap_delim_chars: see http://bugs.mutt.org/trac/ticket/3242, http://bugs.mutt.org/trac/ticket/3151
+set imap_delim_chars    =   "/"
+#
+# Setup for sending mail:
+#
+set realname = "David Banham"
+# Default From: line for when mailing in batch mode
+set from    ="$realname <david@banham.id.au>" # Default address for outgoing mail
+set hostname="banham.id.au"
+my_hdr From: <david@banham.id.au> (David Banham)
+my_hdr Reply-to: <david@banham.id.au> (David Banham)
+#
+# masquerade Return-Path header
+# http://www.mail-archive.com/mutt-users@mutt.org/msg26744.html
+# with CORRECTION to set envelope_from="yes"
+#
+set envelope_from   =   "yes"
+# Automatically begin editing messages
+set autoedit        =   yes
+set edit_headers    =   yes
+set smtp_url        =   "smtp://$imap_user@smtp.gmail.com:587/"
+#
+# IMPORTANT: from http://shreevatsa.wordpress.com/2007/07/31/using-gmail-with-mutt-the-minimal-way/
+#
+# set copy = no
+# otherwise, mutt will try to write an extra copy of sent messages to a sent folder on the local machine or it will prompt you to create a new `IMAP/Sent' label within the INBOX but this will fail
+set copy        =   no
+set postponed       = "+[Gmail]/Drafts"
+set postpone        = ask-yes # auto. postpone unsent msg. when you exit editor
+# activate TLS if available on the server
+set ssl_starttls    = yes
+set ssl_force_tls   = yes
+unset confirmappend # append to existing mailbox without asking
+## set tilde  # Fill out messages with lines starting with '~'. # looks odd
+set read_inc        = 100                          # Read counter ticks every 100 msgs.
+set write_inc       = 100                         # Write counter ticks every 100 msgs.
+
+auto_view text/html
