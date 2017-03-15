@@ -1,6 +1,5 @@
 import XMonad
 import XMonad.Util.Run(spawnPipe)
-import XMonad.Actions.Volume
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 import XMonad.Hooks.ManageDocks
@@ -10,8 +9,7 @@ main = do
 
   xmproc <- spawnPipe "/usr/bin/xmobar"
   xmonad $ defaultConfig {
-      terminal    = "gnome-terminal"
-      , modMask     = mod4Mask
+      modMask     = mod4Mask
       , borderWidth = 1
       , focusFollowsMouse  = True
       , workspaces = [
@@ -29,10 +27,5 @@ main = do
       , layoutHook = avoidStruts $ layoutHook defaultConfig
       }
       `additionalKeys`
-      [ ((mod4Mask, xK_s ), spawn "google-chrome"),
-        ((0, 0x1008ff13 ), raiseVolume 4 >> return ()),
-        ((0, 0x1008ff11 ), lowerVolume 4 >> return ()),
-        ((0, 0x1008ff12 ), spawn "amixer -D pulse set Master 1+ toggle"    >> return ()),
-        ((0, 0x1008ff03 ), spawn "xbacklight -20"),
-        ((0, 0x1008ff02 ), spawn "xbacklight +20")
+      [ ((mod4Mask, xK_s ), spawn "firefox")
       ]
