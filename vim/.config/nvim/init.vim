@@ -114,3 +114,9 @@ set mouse=
 hi Search ctermbg=Black
 
 let g:rustfmt_autosave = 1
+
+imap <C-f> <ESC>:r!google-contacts-lookup <cword><CR><ESC>
+
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
