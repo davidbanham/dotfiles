@@ -1,0 +1,5 @@
+--ignore-dir=vendor
+--ignore-dir=.glide
+--ignore-dir=coverage
+--ignore-dir=.nyc_output
+--ignore-dir=api_docs
