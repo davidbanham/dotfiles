@@ -8,5 +8,9 @@ for i in $( ls ); do
   then
     continue
   fi
+  if [ $i = "bootstrap.sh" ]
+  then
+    continue
+  fi
   stow $i -t ~
 done
