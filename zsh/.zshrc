@@ -55,7 +55,8 @@ plugins=(git)
 
 # User configuration
 
-  export PATH="/home/davidbanham/.bin:/usr/local/go/bin:/home/davidbanham/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/davidbanham/go/bin"
+export PATH="/home/davidbanham/.bin:/usr/local/go/bin:/home/davidbanham/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/davidbanham/go/bin"
+export PATH=~/.npm-global/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
