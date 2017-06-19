@@ -1,2 +1,8 @@
 #!/bin/bash
-notify-send "Job finished"
+MSG=${@:-"Job complete"}
+notify-send "$MSG"
+curl -s \
+  --form-string "token=a96uzq97qxua2tjhom5hp6qwbfnv1e" \
+  --form-string "user=ur8bazqwutf4nrz7n9yvu8pxrcodms" \
+  --form-string "message=$MSG" \
+  https://api.pushover.net/1/messages.json
