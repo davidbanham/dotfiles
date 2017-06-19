@@ -120,3 +120,5 @@ imap <C-f> <ESC>:r!google-contacts-lookup <cword><CR><ESC>
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
