@@ -1,1 +1,17 @@
 vim/.netrwhist
+bin/.bin/ecs-cli
+bin/.bin/ecs-deploy
+bin/.bin/glide
+bin/.bin/google-contacts-lookup
+bin/.bin/hr
+bin/.bin/jq
+bin/.bin/monty
+bin/.bin/nodepath
+bin/.bin/snap-sync
+bin/.bin/vim
+bin/.bin/watchexec
+mailcap/
+offlineimap/.config/offlineimap/get_pass.pyc
+vim/.config/nvim/.netrwhist
+vim/.config/nvim/plugged/
+vim/.local/
