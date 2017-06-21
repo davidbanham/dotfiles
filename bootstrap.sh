@@ -10,7 +10,7 @@ wget -O - https://dl.sinew.in/keys/enpass-linux.key | apt-key add -
 sudo chown root:root /etc/apt/sources.list.d/enpass.list
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt update
-sudo apt install xmonad docker-ce docker-compose arandr enpass stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools ack-grep zsh build-essential cmake powertop laptop-mode-tools neovim
+sudo apt install xmonad docker-ce docker-compose arandr enpass stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools ack-grep zsh build-essential cmake powertop laptop-mode-tools neovim lynx
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -39,3 +39,8 @@ sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 sudo update-alternatives --config editor
 
 curl https://glide.sh/get | sh
+
+curl -O https://prerelease.keybase.io/keybase_amd64.deb
+sudo dpkg -i keybase_amd64.deb
+sudo apt-get install -f
+run_keybase
