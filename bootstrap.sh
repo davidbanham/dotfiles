@@ -48,3 +48,7 @@ curl https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest > ~/.bin
 curl https://raw.githubusercontent.com/silinternational/ecs-deploy/develop/ecs-deploy > ~/.bin/ecs-deploy && chmod +x ~/.bin/ecs-deploy
 curl https://github.com/davidbanham/monty/raw/master/binaries/monty-linux-amd64 > ~/.bin/monty && chmod +x ~/.bin/monty
 cargo install watchexec
+
+curl -L https://github.com/docker/machine/releases/download/v0.12.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+chmod +x /tmp/docker-machine &&
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
