@@ -365,7 +365,15 @@ clientkeys = awful.util.table.join(
             c.maximized = not c.maximized
             c:raise()
         end ,
-        {description = "maximize", group = "client"})
+        {description = "maximize", group = "client"}),
+    -- all minimized clients are restored
+    awful.key({ modkey, "Shift"   }, "n",
+        function()
+          local tag = awful.tag.selected()
+          for i=1, #tag:clients() do
+            tag:clients()[i].minimized=false
+          end
+        end)
 )
 
 -- Bind all key numbers to tags.
