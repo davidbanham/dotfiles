@@ -450,6 +450,8 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },
+    { rule = { instance = "ristretto" },
+      properties = { maximized = false } },
 
     -- Floating clients.
     { rule_any = {
