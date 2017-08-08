@@ -82,3 +82,6 @@ auto_view text/html
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+set query_command="abook --mutt-query '%s'"
+macro index,pager A "abook –add-email-query"

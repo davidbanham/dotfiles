@@ -1,0 +1,2 @@
+set www_command=elinks
+set add_email_prevent_duplicates=true
