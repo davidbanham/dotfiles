@@ -9,7 +9,7 @@ set spoolfile   =   "+INBOX"
 #
 # Password chicanery
 #
-set my_pass=`keybase decrypt -i ~/.sec/pass.gpg 2> /dev/null | awk '/gmailPersonal/ {print $2}'`
+set my_pass=`keybase decrypt -i ~/.sec/pass.gpg 2> /dev/null`
 set imap_pass=$my_pass
 set smtp_pass=$my_pass
 #
