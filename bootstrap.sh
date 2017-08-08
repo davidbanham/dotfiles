@@ -25,7 +25,7 @@ source $HOME/.cargo/env
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
-npm install -g typescript coffeescript yarn
+npm install -g typescript coffeescript yarn livedown
 sudo pip3 install --upgrade neovim
 cd .config/nvim/plugged/YouCompleteMe/
 ./install.py --gocode-completer --clang-completer --tern-completer --racer-completer
