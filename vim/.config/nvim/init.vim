@@ -121,3 +121,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
+au BufReadPost *.hbs set syntax=html
+au BufReadPost *.hbs filetype indent on
+au BufReadPost *.hbs set filetype=html
+au BufReadPost *.hbs set smartindent
