@@ -104,3 +104,5 @@ alias vimdiff="vim -d"
 export GOPATH="/home/davidbanham/go"
 
 export ACKRC=$HOME/.config/ack/config
+
+eval "$(direnv hook zsh)"
