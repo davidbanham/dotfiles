@@ -17,6 +17,9 @@ Plug 'jceb/vim-orgmode'
 Plug 'vimwiki/vimwiki' , { 'branch': 'dev' }
 Plug 'SirVer/ultisnips'
 Plug 'tbabej/taskwiki'
+Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'majutsushi/tagbar'
+Plug 'farseer90718/vim-taskwarrior'
 call plug#end()
 filetype plugin indent on
 
