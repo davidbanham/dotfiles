@@ -12,5 +12,14 @@ for i in $( ls ); do
   then
     continue
   fi
+  if [ $i = "root_stuff" ]
+  then
+    continue
+  fi
   stow $i -t ~
+done
+
+cd root_stuff
+for i in $( ls ); do
+  sudo stow $i -t /
 done
