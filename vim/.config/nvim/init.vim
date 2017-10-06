@@ -3,6 +3,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'digitaltoad/vim-jade'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'kchmck/vim-coffee-script'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-obsession'
@@ -128,3 +129,5 @@ au BufReadPost *.hbs set syntax=html
 au BufReadPost *.hbs filetype indent on
 au BufReadPost *.hbs set filetype=html
 au BufReadPost *.hbs set smartindent
+
+let g:jsx_ext_required = 0
