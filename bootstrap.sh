@@ -17,6 +17,8 @@ cd ~/repos/dotfiles
 ./install.sh
 cd ~
 
+go get github.com/davidbanham/abook_adder
+
 sudo usermod -aG docker $USER
 sudo systemctl enable docker
 curl https://sh.rustup.rs -sSf | sh
