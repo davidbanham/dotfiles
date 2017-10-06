@@ -85,3 +85,5 @@ macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract 
 
 set query_command="abook --mutt-query '%s'"
 set display_filter="mutt_to_abook"
+
+send-hook     "~C @davidsonrfb.org$"     "my_hdr Reply-to: <David.Banham@davidsonrfb.org> (David Banham)"
