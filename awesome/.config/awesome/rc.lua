@@ -366,6 +366,7 @@ clientkeys = awful.util.table.join(
             c:raise()
         end ,
         {description = "maximize", group = "client"}),
+		awful.key({ modkey, "Shift" }, "m", function () awful.util.spawn_with_shell("~/.screenlayout/home.sh") end),
     -- all minimized clients are restored
     awful.key({ modkey, "Shift"   }, "n",
         function()
