@@ -133,3 +133,5 @@ au BufReadPost *.hbs set smartindent
 let g:jsx_ext_required = 0
 
 tnoremap <Esc> <C-\><C-n>
+
+highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
