@@ -131,3 +131,5 @@ au BufReadPost *.hbs set filetype=html
 au BufReadPost *.hbs set smartindent
 
 let g:jsx_ext_required = 0
+
+tnoremap <Esc> <C-\><C-n>

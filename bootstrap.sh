@@ -28,6 +28,7 @@ npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
 npm install -g typescript coffeescript yarn livedown
 sudo pip3 install --upgrade neovim
+sudo pip install neovim
 sudo pip install --upgrade git+git://github.com/tbabej/tasklib@develop
 cd .config/nvim/plugged/YouCompleteMe/
 ./install.py --gocode-completer --clang-completer --tern-completer --racer-completer
