@@ -1,3 +1,5 @@
+[[ $TERM != "screen" ]] && exec tmux
+
 # Path to your oh-my-zsh installation.
   export ZSH=/home/davidbanham/.oh-my-zsh
 
