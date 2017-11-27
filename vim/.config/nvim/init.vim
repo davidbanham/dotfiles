@@ -1,5 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'Valloric/YouCompleteMe'
 Plug 'airblade/vim-gitgutter'
 Plug 'digitaltoad/vim-jade'
 Plug 'pangloss/vim-javascript'
@@ -11,7 +10,7 @@ Plug 'shime/vim-livedown'
 Plug 'Raimondi/vim-yaml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ElmCast/elm-vim'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
 Plug 'jceb/vim-orgmode'
@@ -21,6 +20,13 @@ Plug 'tbabej/taskwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'majutsushi/tagbar'
 Plug 'farseer90718/vim-taskwarrior'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+Plug 'wokalski/autocomplete-flow'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'majutsushi/tagbar'
 call plug#end()
 filetype plugin indent on
 
@@ -135,3 +141,7 @@ let g:jsx_ext_required = 0
 tnoremap <Esc> <C-\><C-n>
 
 highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
+
+let g:deoplete#enable_at_startup = 1
+
+let g:neosnippet#enable_completed_snippet = 1
