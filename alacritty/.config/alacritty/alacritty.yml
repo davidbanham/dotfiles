@@ -75,7 +75,7 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 14.0
+  size: 16.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -173,7 +173,7 @@ color_schemes:
       cyan:    '0x2d9574'
       white:   '0xa3a3a3'
 
-colors: *dark
+colors: *light
 
 # Visual Bell
 #
