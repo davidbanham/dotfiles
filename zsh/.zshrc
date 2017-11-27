@@ -95,6 +95,7 @@ export EDITOR=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias settings=unity-control-center
+alias lock=xflock4
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 
