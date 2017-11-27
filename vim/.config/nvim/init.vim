@@ -23,8 +23,6 @@ Plug 'farseer90718/vim-taskwarrior'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'wokalski/autocomplete-flow'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'majutsushi/tagbar'
 call plug#end()
@@ -126,9 +124,11 @@ let g:rustfmt_autosave = 1
 
 imap <C-f> <ESC>:r!google-contacts-lookup <cword><CR><ESC>
 
-let g:UltiSnipsExpandTrigger="<c-s>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsEditSplit='vertical'
+let g:UltiSnipsExpandTrigger="<C-s>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 au BufReadPost *.hbs set syntax=html
@@ -144,4 +144,4 @@ highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
 
 let g:deoplete#enable_at_startup = 1
 
-let g:neosnippet#enable_completed_snippet = 1
+call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
