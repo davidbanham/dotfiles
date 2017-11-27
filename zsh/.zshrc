@@ -111,3 +111,6 @@ export GOPATH="/home/davidbanham/go"
 export ACKRC=$HOME/.config/ack/config
 
 eval "$(direnv hook zsh)"
+
+# added by travis gem
+[ -f /home/davidbanham/.travis/travis.sh ] && source /home/davidbanham/.travis/travis.sh
