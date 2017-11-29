@@ -22,7 +22,6 @@ Plug 'majutsushi/tagbar'
 Plug 'farseer90718/vim-taskwarrior'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'wokalski/autocomplete-flow'
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'majutsushi/tagbar'
 call plug#end()
