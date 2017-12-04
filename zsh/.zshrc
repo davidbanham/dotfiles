@@ -115,3 +115,5 @@ eval "$(direnv hook zsh)"
 
 # added by travis gem
 [ -f /home/davidbanham/.travis/travis.sh ] && source /home/davidbanham/.travis/travis.sh
+
+alias monon="~/.screenlayout/home.sh"
