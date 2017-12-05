@@ -163,3 +163,5 @@ vnoremap <silent> ? :<C-U>call RangeSearch('?')<CR>:if strlen(g:srchstr) > 0\|ex
 let g:go_fmt_experimental = 1
 
 set foldmethod=indent
+
+au BufNewFile,BufRead * normal zR
