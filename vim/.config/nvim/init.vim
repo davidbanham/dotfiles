@@ -43,8 +43,8 @@ autocmd FileType coffee
 	\ setlocal expandtab
 set ttyfast
 if has("syntax")
-      syntax on
-  endif
+  syntax on
+endif
 set pastetoggle=<F3>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
