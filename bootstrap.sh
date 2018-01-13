@@ -3,11 +3,12 @@ sudo apt-get install     apt-transport-https     ca-certificates     curl     so
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo add-apt-repository ppa:nathan-renniewaldock/flux
+sudo add-apt-repository ppa:gezakovacs/ppa
 sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt update
-sudo apt install xmonad docker-ce docker-compose arandr stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools ack-grep zsh build-essential cmake powertop laptop-mode-tools neovim lynx jq htop autoconf ffmpeg imagemagick abook fluxgui urlscan pass direnv task libfreetype6-dev libfontconfig1-dev xclip
+sudo apt install xmonad docker-ce docker-compose arandr stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools ack-grep zsh build-essential cmake powertop laptop-mode-tools neovim lynx jq htop autoconf ffmpeg imagemagick abook fluxgui urlscan pass direnv task libfreetype6-dev libfontconfig1-dev xclip unetbootin
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
