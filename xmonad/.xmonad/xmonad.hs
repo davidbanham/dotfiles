@@ -71,7 +71,7 @@ myFocusedBorderColor = "#ff0000"
 --
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- launch a terminal
-    [ ((modMask,		xK_Return), spawn $ XMonad.terminal conf)
+    [ ((modMask .|. shiftMask,	xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch firefox
     , ((mod4Mask, xK_s ), spawn "firefox")
@@ -113,7 +113,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,               xK_m     ), withFocused $ sendMessage . maximizeRestore)
 
     -- Swap the focused window and the master window
-    , ((modMask .|. shiftMask, xK_Return), windows W.swapMaster)
+    , ((modMask, xK_Return), windows W.swapMaster)
 
     -- Swap the focused window with the next window
     , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  )
