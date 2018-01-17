@@ -18,6 +18,8 @@ import XMonad.Hooks.EwmhDesktops
 
 import XMonad.Layout.Maximize
 
+import XMonad.Layout.Gaps -- I don't think this will be required once I'm on a recent version of XFCE
+
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -294,6 +296,7 @@ defaults = defaultConfig {
       -- hooks, layouts
         -- DEBUG this is only commented out because this version of xmonad doesn't seem to support it. Uncomment after upgrading
         -- layoutHook         = ewmhDesktopsLayout $ avoidStruts $ myLayout,
+        layoutHook         = gaps [(U,24)] $ Tall 1 (3/100) (1/2) ||| Full,  -- leave gaps at the top this is a hack for old XFCE
         manageHook         = manageDocks <+> myManageHook,
         logHook            = ewmhDesktopsLogHook,
         startupHook        = myStartupHook
