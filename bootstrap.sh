@@ -8,7 +8,7 @@ sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/u
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt update
-sudo apt install xmonad docker-ce docker-compose arandr stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools ack-grep zsh build-essential cmake powertop laptop-mode-tools neovim lynx jq htop autoconf ffmpeg imagemagick abook fluxgui urlscan pass direnv task libfreetype6-dev libfontconfig1-dev xclip unetbootin
+sudo apt install xmonad docker-ce docker-compose arandr stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools ack-grep zsh build-essential cmake powertop laptop-mode-tools neovim lynx jq htop autoconf ffmpeg imagemagick abook fluxgui urlscan pass direnv task libfreetype6-dev libfontconfig1-dev xclip unetbootin weechat
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -34,6 +34,9 @@ sudo pip install --upgrade git+git://github.com/tbabej/tasklib@develop
 pip install --user --upgrade sqlparse
 cd .config/nvim/plugged/YouCompleteMe/
 ./install.py --gocode-completer --clang-completer --tern-completer --racer-completer
+
+# For wee-slack
+sudo pip install websocket-client
 
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 sudo update-alternatives --config vi
