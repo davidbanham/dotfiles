@@ -94,6 +94,7 @@ augroup END
 
 command Prettyjson :%!python -m json.tool
 command Prettysql :%!sqlformat -r -
+command Prettyhtml :%!tidy -q
 
 syn sync minlines=200
 syn sync fromstart
