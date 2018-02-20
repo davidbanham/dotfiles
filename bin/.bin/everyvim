@@ -1,0 +1,2 @@
+#!/bin/bash
+vim /tmp/everyvim && cat /tmp/everyvim | xclip -sel clip -i
