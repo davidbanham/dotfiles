@@ -87,4 +87,12 @@ sudo cp target/release/alacritty /usr/local/bin
 cp Alacritty.desktop ~/.local/share/applications
 cd ~
 
+cd /tmp
+wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+unzip 1.050R-it.zip
+mkdir -p ~/.fonts
+cp source-code-pro-*-it/OTF/*.otf ~/.fonts/
+fc-cache -f -v
+cd ~
+
 go get github.com/davidbanham/termcolour
