@@ -125,3 +125,7 @@ if [ -f '/home/davidbanham/.google-cloud-sdk/path.zsh.inc' ]; then source '/home
 if [ -f '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc' ]; then source '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc'; fi
 
 alias cpass="pass -c"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export FZF_DEFAULT_COMMAND='rg --files'

@@ -96,3 +96,10 @@ fc-cache -f -v
 cd ~
 
 go get github.com/davidbanham/termcolour
+
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.8.0/ripgrep_0.8.0_amd64.deb
+sudo dpkg -i ripgrep_0.8.0_amd64.deb
+rm ripgrep_0.8.0_amd64.deb
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
