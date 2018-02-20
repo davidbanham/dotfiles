@@ -32,7 +32,7 @@ source $HOME/.cargo/env
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 export PATH=~/.npm-global/bin:$PATH
-npm install -g typescript coffeescript yarn livedown
+npm install -g typescript coffeescript yarn livedown coffee-script nesh
 sudo pip3 install --upgrade neovim
 sudo pip install neovim
 sudo pip install --upgrade git+git://github.com/tbabej/tasklib@develop

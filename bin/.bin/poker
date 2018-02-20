@@ -1,4 +1,4 @@
-#!/opt/boxen/nodenv/shims/coffee
+#!/home/davidbanham/.npm-global/bin/coffee
 
 #Depends on a global installation of nesh.
 #npm install -g nesh
