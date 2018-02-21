@@ -103,3 +103,11 @@ rm ripgrep_0.8.0_amd64.deb
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt update && sudo apt install google-cloud-sdk
+gcloud config set project speedtest-186210
+gcloud auth login
+sudo apt-get install kubectl
+gcloud container clusters get-credentials speedtest --zone australia-southeast1-a
