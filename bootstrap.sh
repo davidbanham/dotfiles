@@ -42,6 +42,7 @@ sudo pip3 install --upgrade neovim
 sudo pip install neovim
 sudo pip install --upgrade git+git://github.com/tbabej/tasklib@develop
 pip install --user --upgrade sqlparse
+pip3 install tasklib
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -111,3 +112,6 @@ gcloud config set project speedtest-186210
 gcloud auth login
 sudo apt-get install kubectl
 gcloud container clusters get-credentials speedtest --zone australia-southeast1-a
+
+wget https://github.com/gohugoio/hugo/releases/download/v0.36.1/hugo_0.36.1_Linux-64bit.deb
+sudo dpkg -i hugo_0.36.1_Linux-64bit.deb

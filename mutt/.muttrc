@@ -87,3 +87,7 @@ set query_command="abook --mutt-query '%s'"
 set display_filter="mutt_to_abook"
 
 send-hook     "~C @davidsonrfb.org$"     "my_hdr Reply-to: <David.Banham@davidsonrfb.org> (David Banham)"
+send-hook     "~C @takehome.io$"     "my_hdr Reply-to: <david@takehome.io> (David Banham)"
+
+set attach_keyword = "\\<attach(|ed|ments?)\\>"
+set abort_noattach = yes
