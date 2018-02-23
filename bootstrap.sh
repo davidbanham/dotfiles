@@ -18,7 +18,7 @@ wget https://dl.google.com/go/go1.10.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.10.linux-amd64.tar.gz
 
 sudo apt update
-sudo apt install xmonad docker-ce docker-compose arandr stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools zsh build-essential cmake powertop laptop-mode-tools neovim lynx jq htop autoconf ffmpeg imagemagick abook fluxgui urlscan pass direnv task libfreetype6-dev libfontconfig1-dev xclip unetbootin weechat tarsnap tmux cargo mutt
+sudo apt install xmonad docker-ce docker-compose arandr stow nodejs python-dev python-pip python3-dev python3-pip golang-go golang-go.tools zsh build-essential cmake powertop laptop-mode-tools neovim lynx jq htop autoconf ffmpeg imagemagick abook fluxgui urlscan pass direnv task libfreetype6-dev libfontconfig1-dev xclip unetbootin weechat tarsnap tmux cargo mutt inkscape
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -43,6 +43,7 @@ sudo pip install neovim
 sudo pip install --upgrade git+git://github.com/tbabej/tasklib@develop
 pip install --user --upgrade sqlparse
 pip3 install tasklib
+pip install scour
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
