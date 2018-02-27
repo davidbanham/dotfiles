@@ -3,3 +3,4 @@ tarsnap -c -f code_`date --rfc-3339=seconds | sed 's/ /T/'` go repos
 #tarsnap -c -f config_`date --rfc-3339=seconds | sed 's/ /T/'` .config
 tarsnap -c -f keys_`date --rfc-3339=seconds | sed 's/ /T/'` .ssh
 tarsnap -c -f pass_`date --rfc-3339=seconds | sed 's/ /T/'` .password-store
+tarsnap -c -f wiki_`date --rfc-3339=seconds | sed 's/ /T/'` vimwiki
