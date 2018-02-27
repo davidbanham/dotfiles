@@ -16,3 +16,16 @@ vim/.config/nvim/.netrwhist
 vim/.config/nvim/plugged/
 vim/.local/
 /abook/.abook/addressbook
+/abook/.abook/addressbook*
+/weechat/.weechat/*.conf
+/weechat/.weechat/logs
+/weechat/.weechat/*.log
+/xkbmap/.config/autostart/Panel restart.desktop
+/xkbmap/.config/autostart/Xmonad.desktop
+/xkbmap/.config/autostart/keybase_autostart.desktop
+/xfce4-terminal/.local/share/xfce4/helpers/
+/xmonad/.xmonad/xmonad-x86_64-linux
+/xmonad/.xmonad/xmonad.errors
+/xmonad/.xmonad/xmonad.hi
+/xmonad/.xmonad/xmonad.o
+/xmonad/.xmonad/xmonad.state
