@@ -1,39 +1,52 @@
 [submodule "aur/direnv"]
 	path = aur/direnv
 	url = https://aur.archlinux.org/direnv.git
+	ignore = dirty
 [submodule "aur/dasht"]
 	path = aur/dasht
 	url = https://aur.archlinux.org/dasht-git.git
+	ignore = dirty
 [submodule "aur/tasklib"]
 	path = aur/tasklib
 	url = https://aur.archlinux.org/python-tasklib.git
+	ignore = dirty
 [submodule "aur/sqlparse"]
 	path = aur/sqlparse
 	url = https://aur.archlinux.org/python-sqlparse-git.git
+	ignore = dirty
 [submodule "aur/keybase"]
 	path = aur/keybase
 	url = https://aur.archlinux.org/keybase-bin.git
+	ignore = dirty
 [submodule "aur/alacritty"]
 	path = aur/alacritty
 	url = https://aur.archlinux.org/alacritty-git.git
+	ignore = dirty
 [submodule "aur/aws-ecs-cli"]
 	path = aur/aws-ecs-cli
 	url = https://aur.archlinux.org/aws-ecs-cli.git
+	ignore = dirty
 [submodule "aur/watchexec"]
 	path = aur/watchexec
 	url = https://aur.archlinux.org/watchexec.git
+	ignore = dirty
 [submodule "aur/ffcast"]
 	path = aur/ffcast
 	url = https://aur.archlinux.org/ffcast.git
+	ignore = dirty
 [submodule "aur/google-cloud-sdk"]
 	path = aur/google-cloud-sdk
 	url = https://aur.archlinux.org/google-cloud-sdk.git
+	ignore = dirty
 [submodule "aur/kubectl"]
 	path = aur/kubectl
 	url = https://aur.archlinux.org/kubectl-bin.git
+	ignore = dirty
 [submodule "aur/xrectsel"]
 	path = aur/01-xrectsel
 	url = https://aur.archlinux.org/xrectsel.git
+	ignore = dirty
 [submodule "aur/oh-my-zsh"]
 	path = aur/oh-my-zsh
 	url = https://aur.archlinux.org/oh-my-zsh-git.git
+	ignore = dirty
