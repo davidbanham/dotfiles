@@ -1,0 +1,39 @@
+[submodule "aur/direnv"]
+	path = aur/direnv
+	url = https://aur.archlinux.org/direnv.git
+[submodule "aur/dasht"]
+	path = aur/dasht
+	url = https://aur.archlinux.org/dasht-git.git
+[submodule "aur/tasklib"]
+	path = aur/tasklib
+	url = https://aur.archlinux.org/python-tasklib.git
+[submodule "aur/sqlparse"]
+	path = aur/sqlparse
+	url = https://aur.archlinux.org/python-sqlparse-git.git
+[submodule "aur/keybase"]
+	path = aur/keybase
+	url = https://aur.archlinux.org/keybase-bin.git
+[submodule "aur/alacritty"]
+	path = aur/alacritty
+	url = https://aur.archlinux.org/alacritty-git.git
+[submodule "aur/aws-ecs-cli"]
+	path = aur/aws-ecs-cli
+	url = https://aur.archlinux.org/aws-ecs-cli.git
+[submodule "aur/watchexec"]
+	path = aur/watchexec
+	url = https://aur.archlinux.org/watchexec.git
+[submodule "aur/ffcast"]
+	path = aur/ffcast
+	url = https://aur.archlinux.org/ffcast.git
+[submodule "aur/google-cloud-sdk"]
+	path = aur/google-cloud-sdk
+	url = https://aur.archlinux.org/google-cloud-sdk.git
+[submodule "aur/kubectl"]
+	path = aur/kubectl
+	url = https://aur.archlinux.org/kubectl-bin.git
+[submodule "aur/xrectsel"]
+	path = aur/01-xrectsel
+	url = https://aur.archlinux.org/xrectsel.git
+[submodule "aur/oh-my-zsh"]
+	path = aur/oh-my-zsh
+	url = https://aur.archlinux.org/oh-my-zsh-git.git

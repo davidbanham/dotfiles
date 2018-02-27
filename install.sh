@@ -16,6 +16,10 @@ for i in $( ls ); do
   then
     continue
   fi
+  if [ $i = "aur" ]
+  then
+    continue
+  fi
   stow $i -t ~
 done
 
