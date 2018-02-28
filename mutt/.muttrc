@@ -77,6 +77,8 @@ unset confirmappend # append to existing mailbox without asking
 set read_inc        = 100                          # Read counter ticks every 100 msgs.
 set write_inc       = 100                         # Write counter ticks every 100 msgs.
 
+set mailcap_path = ~/.mutt/mailcap
+alternative_order text/plain text/html
 auto_view text/html
 
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
