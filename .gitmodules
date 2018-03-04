@@ -50,3 +50,7 @@
 	path = aur/oh-my-zsh
 	url = https://aur.archlinux.org/oh-my-zsh-git.git
 	ignore = dirty
+[submodule "aur/pa-applet-git"]
+	path = aur/pa-applet-git
+	url = https://aur.archlinux.org/pa-applet-git.git
+  ignore = dirty
