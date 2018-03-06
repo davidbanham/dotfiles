@@ -30,3 +30,5 @@ go get github.com/davidbanham/monty
 gcloud config set project speedtest-186210
 gcloud auth login
 gcloud container clusters get-credentials speedtest --zone australia-southeast1-a
+
+echo "Arduino Bash C Docker Express Go HTML JavaScript Markdown MomentJS NodeJS PhoneGap PostgreSQL React Redis Rust SVG Vim" | xargs -n 1 | awk '{print "^"$$1"$"}' | xargs -n 1 dasht-docsets-install -f
