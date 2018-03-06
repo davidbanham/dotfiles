@@ -1,0 +1,2 @@
+#!/bin/bash
+pacmd set-card-profile bluez_card.FC_F1_52_79_49_6A a2dp_sink
