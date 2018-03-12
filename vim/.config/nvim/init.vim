@@ -119,6 +119,7 @@ set backspace=indent,eol,start
 au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.tag set filetype=html
 au BufNewFile,BufRead *.md set spell spelllang=en_au
+au BufNewFile,BufRead *.wiki set spell spelllang=en_au
 set mouse=
 hi Search ctermbg=Black
 
