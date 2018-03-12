@@ -54,3 +54,7 @@
 	path = aur/pa-applet-git
 	url = https://aur.archlinux.org/pa-applet-git.git
   ignore = dirty
+[submodule "aur/ngrok"]
+	path = aur/ngrok
+	url = https://aur.archlinux.org/ngrok.git
+  ignore = dirty
