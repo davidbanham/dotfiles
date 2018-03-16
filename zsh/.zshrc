@@ -64,6 +64,7 @@ export PATH="/home/davidbanham/.bin:/usr/local/go/bin:/home/davidbanham/.npm-pac
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.local/bin/:$PATH
 export PATH="$PATH:/opt/mssql-tools/bin"
+export PATH="$PATH:/usr/bin/core_perl/"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
