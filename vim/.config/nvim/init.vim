@@ -180,3 +180,6 @@ au BufNewFile,BufRead * normal zR
 hi Folded ctermbg=Black
 
 au VimLeave *.wiki !task sync
+
+nmap <leader>t :GoTest<CR>
+nmap <leader>n :cnext<CR>
