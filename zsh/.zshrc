@@ -130,3 +130,5 @@ alias cpass="pass -c"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export FZF_DEFAULT_COMMAND='rg --files'
+
+alias todo="vim ~/Dropbox/todo/todo.txt"
