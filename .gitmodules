@@ -61,3 +61,8 @@
 [submodule "aur/dropbox"]
 	path = aur/dropbox
 	url = https://aur.archlinux.org/dropbox.git
+  ignore = dirty
+[submodule "aur/httperf"]
+	path = aur/httperf
+	url = https://aur.archlinux.org/httperf-git.git
+  ignore = dirty
