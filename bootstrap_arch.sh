@@ -3,7 +3,7 @@ set -euxo pipefail
 
 pacman -S xfce4 xf86-video-intel xorg-server base-devel openssh
 
-pacman -S neovim python-neovim redshift docker nodejs tarsnap go xmonad stow python python2 zsh jq htop ffmpeg imagemagick abook pass task xclip weechat tmux mutt inkscape firefox npm python-pip adobe-source-code-pro-fonts ripgrep fzf hugo python-setuptools python2-setuptools rustup scour python-websocket-client python2-websocket-client ttf-freefont ttf-liberation ttf-droid docker-compose tlp xdg-utils lynx postgresql bc arduino pulseaudio pulseaudio-alsa pulseaudio-bluetooth xfce4-pulseaudio-plugin pavucontrol minicom bluez bluez-utils blueman-manager zip unzip virtualbox s3cmd go-tools siege arp-scan
+pacman -S neovim python-neovim redshift docker nodejs tarsnap go xmonad stow python python2 zsh jq htop ffmpeg imagemagick abook pass task xclip weechat tmux mutt inkscape firefox npm python-pip adobe-source-code-pro-fonts ripgrep fzf hugo python-setuptools python2-setuptools rustup scour python-websocket-client python2-websocket-client ttf-freefont ttf-liberation ttf-droid docker-compose tlp xdg-utils lynx postgresql bc arduino pulseaudio pulseaudio-alsa pulseaudio-bluetooth xfce4-pulseaudio-plugin pavucontrol minicom bluez bluez-utils blueman-manager zip unzip virtualbox s3cmd go-tools siege arp-scan opencv
 
 cd aur
 for i in $( ls ); do
