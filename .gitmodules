@@ -66,3 +66,7 @@
 	path = aur/httperf
 	url = https://aur.archlinux.org/httperf-git.git
   ignore = dirty
+[submodule "aur/v4l2loopback"]
+	path = aur/v4l2loopback
+	url = https://aur.archlinux.org/v4l2loopback-dkms-git.git
+  ignore = dirty
