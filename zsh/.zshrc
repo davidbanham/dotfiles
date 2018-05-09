@@ -132,3 +132,4 @@ alias cpass="pass -c"
 export FZF_DEFAULT_COMMAND='rg --files'
 
 alias todo="vim ~/Dropbox/todo/todo.txt"
+alias bsctime="vim ~/vimwiki/brindabella/time.wiki"
