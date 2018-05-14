@@ -134,3 +134,4 @@ export FZF_DEFAULT_COMMAND='rg --files'
 alias todo="vim ~/Dropbox/todo/todo.txt"
 alias bsctime="vim ~/vimwiki/brindabella/time.wiki"
 alias bootstrap="vim ~/repos/dotfiles/bootstrap_arch.sh"
+alias wut="task ready"
