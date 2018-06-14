@@ -1,0 +1,5 @@
+#!/bin/sh
+input=$(cat)
+from=$(grep 'From' --max-count=1 <<< $input)
+subject=$(grep 'Subject' --max-count=1 <<< $input)
+/usr/bin/task add +email E-mail: $subject From $from
