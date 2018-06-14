@@ -135,3 +135,6 @@ alias todo="vim ~/Dropbox/todo/todo.txt"
 alias bsctime="vim ~/vimwiki/brindabella/time.wiki"
 alias bootstrap="vim ~/repos/dotfiles/bootstrap_arch.sh"
 alias wut="task ready"
+alias dun='f() { task done $1 && wut };f'
+alias yep='f() { task start $1 && wut };f'
+alias standup='echo DONE && task did end:yesterday && echo TODO && wut'

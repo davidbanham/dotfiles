@@ -38,3 +38,20 @@ taskd.trust=ignore hostname
 context.fun=project:fun
 context.srs=project.not:fun
 context=srs
+
+uda.size.type=string
+uda.size.label=Size
+uda.size.values=l,m,s
+
+report.did.description=List of things I did
+report.did.columns=size,project,description.count
+report.did.sort=size+
+
+report.ready.columns=id,size,start.age,entry.age,depends.indicator,priority,project,tags,recur.indicator,scheduled.countdown,due.countdown,until.remaining,description,urgency
+report.ready.labels=ID,Size,Active,Age,D,P,Project,Tags,R,S,Due,Until,Description,Urg
+
+report.next.columns=id,size,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,description,urgency
+report.next.labels=ID,Size,Active,Age,Deps,P,Project,Tag,Recur,S,Due,Until,Description,Urg
+
+scheduled=today
+uda.size.default=s
