@@ -10,8 +10,17 @@ set spoolfile   =   "+INBOX"
 # Password chicanery
 #
 set my_pass=`keybase decrypt -i ~/.sec/pass.gpg 2> /dev/null`
+set my_ses_pass=`keybase decrypt -i ~/.sec/ses_pass.gpg 2> /dev/null`
+set my_brindabella_pass=`keybase decrypt -i ~/.sec/brindabella_pass.gpg 2> /dev/null`
 set imap_pass=$my_pass
 set smtp_pass=$my_pass
+
+set reverse_name=yes
+set reverse_realname=yes
+
+alternates     ^david@banham.id.au$ ^david@takehome.io$ ^david@clubman.io$ ^info@brindabellaskiclub.org.au$ ^david@crnr.io$ ^david.banham@davidsonrfb.org$
+
+
 #
 # Reduce polling frequency to a sane level
 #
@@ -49,8 +58,6 @@ set realname = "David Banham"
 # Default From: line for when mailing in batch mode
 set from    ="$realname <david@banham.id.au>" # Default address for outgoing mail
 set hostname="banham.id.au"
-my_hdr From: <david@banham.id.au> (David Banham)
-my_hdr Reply-to: <david@banham.id.au> (David Banham)
 #
 # masquerade Return-Path header
 # http://www.mail-archive.com/mutt-users@mutt.org/msg26744.html
@@ -88,8 +95,25 @@ macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract 
 set query_command="abook --mutt-query '%s'"
 set display_filter="mutt_to_abook"
 
-send-hook     "~C @davidsonrfb.org$"     "my_hdr Reply-to: <David.Banham@davidsonrfb.org> (David Banham)"
-send-hook     "~C @takehome.io$"     "my_hdr Reply-to: <david@takehome.io> (David Banham)"
+# Default reset hook
+send2-hook "~A" "set smtp_url=smtp://$imap_user@smtp.gmail.com:587/"
+send2-hook "~A" "set smtp_pass=$my_pass"
 
-set attach_keyword = "\\<attach(|ed|ments?)\\>"
-set abort_noattach = yes
+send2-hook     "~f *david@takehome.io*"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
+send2-hook     "~f *david@takehome.io*"     "set smtp_pass=$my_ses_pass"
+
+send2-hook     "~f *david@clubman.io*"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
+send2-hook     "~f *david@clubman.io*"     "set smtp_pass=$my_ses_pass"
+
+send2-hook     "~f *david@crnr.io*"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
+send2-hook     "~f *david@crnr.io*"     "set smtp_pass=$my_ses_pass"
+
+#send2-hook     "~f *info@brindabellaskiclub.org.au*"     "set smtp_url=smtp://info@brindabellaskiclub.org.au@zcs.mailtransact.com:587/"
+#send2-hook     "~f *info@brindabellaskiclub.org.au*"     "set smtp_pass=$my_brindabella_pass"
+
+
+# set attach_keyword = "\\<attach(|ed|ments?)\\>"
+# set abort_noattach = yes
+
+macro index t "<pipe-message>mutt2task<enter>"
+macro index p "<pipe-message>echo > /tmp/wtfmutt<enter>"
