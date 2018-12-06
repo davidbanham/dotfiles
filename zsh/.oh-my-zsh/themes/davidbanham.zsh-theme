@@ -1,6 +1,6 @@
 local ret_status="%(?:%{$fg_bold[green]%}⚝ :%{$fg_bold[red]%}⚝ %s)"
 PROMPT='${ret_status}'
-RPROMPT='%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}`task +READY count`'
+RPROMPT='%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}`echo $((\`wat do | wc -l\` - 2))`'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
