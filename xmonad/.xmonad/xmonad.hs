@@ -24,7 +24,7 @@ import XMonad.Layout.Gaps -- I don't think this will be required once I'm on a r
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "alacritty"
+myTerminal      = "uxterm"
 
 -- Width of the window border in pixels.
 --
@@ -74,6 +74,7 @@ myFocusedBorderColor = "#ff0000"
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- launch a terminal
     [ ((modMask .|. shiftMask,	xK_Return), spawn $ XMonad.terminal conf)
+    , ((modMask .|. controlMask,	xK_Tab), spawn $ XMonad.terminal conf)
 
     -- launch firefox
     , ((mod4Mask, xK_s ), spawn "firefox")
@@ -116,6 +117,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
     -- Swap the focused window and the master window
     , ((modMask, xK_Return), windows W.swapMaster)
+    , ((modMask .|. shiftMask, xK_Tab), windows W.swapMaster)
 
     -- Swap the focused window with the next window
     , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  )
@@ -130,7 +132,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     , ((modMask,               xK_l     ), sendMessage Expand)
 
     -- Push window back into tiling
-    , ((modMask,               xK_t     ), withFocused $ windows . W.sink)
+    , ((modMask .|. shiftMask, xK_t     ), withFocused $ windows . W.sink)
 
     -- Increment the number of windows in the master area
     , ((modMask              , xK_comma ), sendMessage (IncMasterN 1))

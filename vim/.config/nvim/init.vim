@@ -24,8 +24,14 @@ Plug 'tbabej/taskwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'majutsushi/tagbar'
 Plug 'farseer90718/vim-taskwarrior'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'junegunn/fzf'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'iCyMind/NeoSolarized'
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
@@ -36,6 +42,9 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'majutsushi/tagbar'
 Plug 'freitass/todo.txt-vim'
 Plug 'jremmen/vim-ripgrep'
+Plug 'leafgarland/typescript-vim'
+Plug '~/.fzf'
+Plug 'chrisbra/csv.vim'
 call plug#end()
 filetype plugin indent on
 
@@ -73,7 +82,9 @@ endif
 " :20 : up to 20 lines of command-line history will be remembered
 " % : saves and restores the buffer list
 " n... : where to save the viminfo files
-set viminfo='10,\"100,:20,%,n~/.viminfo
+if !has('nvim')
+  set viminfo='10,\"100,:20,%,n~/.viminfo
+endif
 
 " when we reload, tell vim to restore the cursor to the saved position
 augroup JumpCursorOnEdit
@@ -193,7 +204,46 @@ hi Folded ctermbg=Black
 
 au VimLeave *.wiki !task sync
 
-nmap <leader>t :GoTest<CR>
+au BufNewFile,BufRead *.rs :compiler cargo
+au BufNewFile,BufRead *.rs nmap <leader>t :make build<CR>:copen<CR>
+au BufNewFile,BufRead *.go nmap <leader>t :GoTest<CR>
 nmap <leader>n :cnext<CR>
 
-set pyxversion=3
+if !has('nvim')
+  set pyxversion=3
+endif
+
+colorscheme default
+
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+
+autocmd FileType make   setlocal noexpandtab
+
+set undodir=~/.vim/undodir
+set undofile
+
+" C-c and C-v - Copy/Paste to global clipboard
+vmap <C-c> "+y
+imap <C-v> <esc>"+gp
+
+set termguicolors
+if has('nvim')
+  colorscheme NeoSolarized
+  set background=light
+endif
+
+nmap <leader>f :FZF<CR>
+
+highlight LineNr guibg=base00
+
+set nohlsearch
+
+let mapleader="\<Space>"
+nnoremap <leader>* :%s/\<<c-r><c-w>\>//g<left><left>
+nnoremap <leader>w :w<cr>

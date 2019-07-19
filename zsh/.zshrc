@@ -1,4 +1,4 @@
-[[ $TERM != "screen" ]] && exec tmux
+#[[ $TERM != "screen" ]] && exec tmux
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/davidbanham/.oh-my-zsh
@@ -96,7 +96,7 @@ export EDITOR=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias settings=unity-control-center
-alias lock=xflock4
+alias lock=physlock
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 
@@ -123,7 +123,7 @@ alias monon="~/.screenlayout/home.sh"
 if [ -f '/home/davidbanham/.google-cloud-sdk/path.zsh.inc' ]; then source '/home/davidbanham/.google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc' ]; then source '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc'; fi
+#if [ -f '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc' ]; then source '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc'; fi
 
 alias cpass="pass -c"
 
@@ -134,7 +134,7 @@ export FZF_DEFAULT_COMMAND='rg --files'
 alias todo="vim ~/Dropbox/todo/todo.txt"
 alias bsctime="vim ~/vimwiki/brindabella/time.wiki"
 alias bootstrap="vim ~/repos/dotfiles/bootstrap_arch.sh"
-alias wut="task ready"
 alias dun='f() { task done $1 && wut };f'
 alias yep='f() { task start $1 && wut };f'
 alias standup='{echo \`\`\`DONE && task did end.after:yesterday && echo TODO && wut && echo \`\`\`} | xclip -sel clip -i'
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

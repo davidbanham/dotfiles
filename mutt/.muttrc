@@ -99,14 +99,17 @@ set display_filter="mutt_to_abook"
 send2-hook "~A" "set smtp_url=smtp://$imap_user@smtp.gmail.com:587/"
 send2-hook "~A" "set smtp_pass=$my_pass"
 
-send2-hook     "~f *david@takehome.io*"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
-send2-hook     "~f *david@takehome.io*"     "set smtp_pass=$my_ses_pass"
+send2-hook     "~f david@takehome.io"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
+send2-hook     "~f david@takehome.io"     "set smtp_pass=$my_ses_pass"
 
-send2-hook     "~f *david@clubman.io*"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
-send2-hook     "~f *david@clubman.io*"     "set smtp_pass=$my_ses_pass"
+send2-hook     "~f david@clubman.io"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
+send2-hook     "~f david@clubman.io"     "set smtp_pass=$my_ses_pass"
 
-send2-hook     "~f *david@crnr.io*"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
-send2-hook     "~f *david@crnr.io*"     "set smtp_pass=$my_ses_pass"
+send2-hook     "~f david@crnr.io"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
+send2-hook     "~f david@crnr.io"     "set smtp_pass=$my_ses_pass"
+
+send2-hook     "~f david@notbad.software"     "set smtp_url=smtp://AKIAI2MTY2EQJLQ2VRNA@email-smtp.us-east-1.amazonaws.com:587/"
+send2-hook     "~f david@notbad.software"     "set smtp_pass=$my_ses_pass"
 
 #send2-hook     "~f *info@brindabellaskiclub.org.au*"     "set smtp_url=smtp://info@brindabellaskiclub.org.au@zcs.mailtransact.com:587/"
 #send2-hook     "~f *info@brindabellaskiclub.org.au*"     "set smtp_pass=$my_brindabella_pass"

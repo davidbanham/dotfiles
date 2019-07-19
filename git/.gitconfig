@@ -12,9 +12,19 @@
 	tool = vimdiff
 [push]
 	default = simple
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+#[url "ssh://git@github.com/"]
+#	insteadOf = https://github.com/
 [credential]
 	helper = cache
 [core]
 	editor = vim
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@bitbucket.org:"]
+  insteadOf = https://bitbucket.org/
+
+[sendemail]
+ smtpserver = smtp.gmail.com
+ smtpuser = david@banham.id.au
+ smtpencryption = tls
+ smtpserverport = 587
