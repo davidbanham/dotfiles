@@ -20,6 +20,7 @@ bluez-utils
 bzip2
 cabal-install
 chromium
+conntrack-tools
 coreutils
 cryptsetup
 cups
@@ -94,15 +95,18 @@ mdadm
 minicom
 mono
 msmtp
+mtpaint
 musl
 mutt
 nano
 neovim
+net-tools
 netctl
 nginx
 ngrok
 nodejs
 notify-osd
+notmuch
 npm
 nss-mdns
 oh-my-zsh-git
@@ -154,6 +158,7 @@ sed
 shadow
 shotwell
 siege
+sshfs
 stack
 stow
 sudo
