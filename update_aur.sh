@@ -16,11 +16,14 @@ cd aur
 for i in $( cat ../aurs ); do
   cd $i
   if ls *.pkg.tar.xz
+  # When pacman 5.2 releases these extensions will change to zst 
+  #if ls *.pkg.tar.zst
   then
     rm *.pkg.tar.xz
   fi
   sudo -u davidbanham makepkg --ignorearch --clean --syncdeps --force
   pacman -U *.pkg.tar.xz
+  #pacman -U *.pkg.tar.zst
   cd ..
   tail -n +2 ../aurs > ../new_aurs && mv ../new_aurs ../aurs
 done

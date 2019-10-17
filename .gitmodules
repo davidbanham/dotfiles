@@ -79,3 +79,12 @@
 [submodule "aur/aerc"]
 	path = aur/aerc
 	url = https://aur.archlinux.org/aerc.git
+[submodule "displaylink"]
+	path = displaylink
+	url = https://aur.archlinux.org/displaylink.git
+[submodule "aur/displaylink"]
+	path = aur/displaylink
+	url = https://aur.archlinux.org/displaylink.git
+[submodule "aur/evdi"]
+	path = aur/evdi
+	url = https://aur.archlinux.org/evdi.git
