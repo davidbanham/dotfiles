@@ -19,6 +19,7 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.Maximize
 
 import XMonad.Layout.Gaps -- I don't think this will be required once I'm on a recent version of XFCE
+import XMonad.Layout.ThreeColumns
 
 
 -- The preferred terminal program, which is used in a binding below and by
@@ -201,7 +202,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = maximize (tiled) ||| Mirror tiled ||| Full
+myLayout = maximize (tiled) ||| Mirror tiled ||| Full ||| Mirror ( ThreeCol 1 (3/100) (1/2))
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -298,7 +299,7 @@ defaults = defaultConfig {
       -- hooks, layouts
         -- DEBUG this is only commented out because this version of xmonad doesn't seem to support it. Uncomment after upgrading
         -- layoutHook         = ewmhDesktopsLayout $ avoidStruts $ myLayout,
-        layoutHook         = gaps [(U,24)] $ Tall 1 (3/100) (1/2) ||| Full,  -- leave gaps at the top this is a hack for old XFCE
+        layoutHook         = gaps [(U,24)] $ Tall 1 (3/100) (1/2) ||| Full ||| Mirror ( ThreeCol 1 (3/100) (1/2)),  -- leave gaps at the top this is a hack for old XFCE
         manageHook         = manageDocks <+> myManageHook,
         logHook            = ewmhDesktopsLogHook,
         startupHook        = myStartupHook
