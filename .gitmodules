@@ -66,9 +66,6 @@
 	path = aur/v4l2loopback
 	url = https://aur.archlinux.org/v4l2loopback-dkms-git.git
   ignore = dirty
-[submodule "aur/zoom"]
-	path = aur/zoom
-	url = https://aur.archlinux.org/zoom.git
 [submodule "aur/paperkey"]
 	path = aur/paperkey
 	url = https://aur.archlinux.org/paperkey.git
@@ -90,3 +87,6 @@
 [submodule "aur/xfce4-indicator-plugin"]
 	path = aur/xfce4-indicator-plugin
 	url = https://aur.archlinux.org/xfce4-indicator-plugin.git
+[submodule "aur/todoist"]
+	path = aur/todoist
+	url = https://aur.archlinux.org/todoist.git
