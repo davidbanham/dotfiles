@@ -8,6 +8,7 @@
 --
 
 import XMonad
+import XMonad.Hooks.DynamicLog
 import System.Exit
 
 import qualified XMonad.StackSet as W
@@ -15,6 +16,7 @@ import qualified Data.Map        as M
 
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Config.Xfce
 
 import XMonad.Layout.Maximize
 
@@ -235,10 +237,7 @@ myLayout = maximize (tiled) ||| Mirror tiled ||| Full ||| Mirror ( ThreeCol 1 (3
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
-    , className =? "Xfce4-appfinder"  --> doFloat
-    , className =? "Xfrun4"           --> doFloat
-    , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    ]
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -272,7 +271,7 @@ myStartupHook = return ()
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad defaults
+main = xmonad =<< xmobar defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will 
@@ -280,7 +279,7 @@ main = xmonad defaults
 -- 
 -- No need to modify this.
 --
-defaults = defaultConfig {
+defaults = xfceConfig {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
@@ -297,10 +296,8 @@ defaults = defaultConfig {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        -- DEBUG this is only commented out because this version of xmonad doesn't seem to support it. Uncomment after upgrading
-        -- layoutHook         = ewmhDesktopsLayout $ avoidStruts $ myLayout,
-        layoutHook         = gaps [(U,24)] $ Tall 1 (3/100) (1/2) ||| Full ||| Mirror ( ThreeCol 1 (3/100) (1/2)),  -- leave gaps at the top this is a hack for old XFCE
-        manageHook         = manageDocks <+> myManageHook,
+        layoutHook         = myLayout,
+        manageHook         = myManageHook,
         logHook            = ewmhDesktopsLogHook,
         startupHook        = myStartupHook
     }

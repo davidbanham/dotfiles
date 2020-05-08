@@ -43,8 +43,10 @@ Config { font = "xft:Source Code Pro"
                                                    -- charged status
                                                    , "-i"	, "<fc=#006000>Charged</fc>"
                                          ] 50
+                     , Run Com "/bin/bash" ["/home/davidbanham/.bin/echo_mic_status.sh"] "micstatus" 5
+                     , Run StdinReader
+                     --, Run Com "while" ["inotifywait", "-e", "close_write", "~/.global_mic_status;", "do", "cat", "~/.global_mic_status;", "done", "&" ] "micstatus" 100
        ]
        , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %wlx3059b700aa02% }\
-                    \{ <fc=#ee9a00>%date%</fc>| %YSSY% | %battery%"
+       , template = "%cpu% | %memory% * %swap% | %StdinReader% | %wlx3059b700aa02% }{<fc=#ee9a00>%date%</fc>| %YSSY% | %battery% | %micstatus%"
        }
