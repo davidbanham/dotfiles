@@ -32,3 +32,6 @@
 [submodule "aur/todoist"]
 	path = aur/todoist
 	url = https://aur.archlinux.org/todoist.git
+[submodule "aur/nomachine"]
+	path = aur/nomachine
+	url = https://aur.archlinux.org/nomachine.git
