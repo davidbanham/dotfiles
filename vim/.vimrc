@@ -18,7 +18,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
 Plug 'jceb/vim-orgmode'
-Plug 'vimwiki/vimwiki' , { 'branch': 'dev' }
+"Plug 'vimwiki/vimwiki' , { 'branch': 'dev' }
 Plug 'SirVer/ultisnips'
 Plug 'tbabej/taskwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
@@ -207,6 +207,7 @@ au VimLeave *.wiki !task sync
 au BufNewFile,BufRead *.rs :compiler cargo
 au BufNewFile,BufRead *.rs nmap <leader>t :make build<CR>:copen<CR>
 au BufNewFile,BufRead *.go nmap <leader>t :GoTest<CR>
+au BufNewFile,BufRead *.rs nmap <leader>t :RustTest!<CR>
 nmap <leader>n :cnext<CR>
 
 if !has('nvim')
@@ -246,4 +247,11 @@ set nohlsearch
 
 let mapleader="\<Space>"
 nnoremap <leader>* :%s/\<<c-r><c-w>\>//g<left><left>
-nnoremap <leader>w :w<cr>
+
+nmap <leader>w :s/\(<c-r>=expand("<cWORD>")<cr>\)/
+
+augroup filetypedetect
+au BufNewFile,BufRead *.tjp,*.tji               setf tjp
+augroup END
+
+au! Syntax tjp          so ~/.vim/syntax/tjp.vim
