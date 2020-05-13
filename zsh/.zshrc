@@ -60,7 +60,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/home/davidbanham/.bin:/usr/local/go/bin:/home/davidbanham/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/davidbanham/go/bin"
+export PATH="/home/davidbanham/.bin:/usr/local/go/bin:/home/davidbanham/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/davidbanham/go/bin:/home/davidbanham/.gem/ruby/2.6.0/bin"
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.local/bin/:$PATH
 export PATH="$PATH:/opt/mssql-tools/bin"
@@ -131,10 +131,16 @@ alias cpass="pass -c"
 
 export FZF_DEFAULT_COMMAND='rg --files'
 
-alias todo="vim ~/Dropbox/todo/todo.txt"
-alias bsctime="vim ~/vimwiki/brindabella/time.wiki"
+alias todo="todoist list --filter '(overdue | today)'"
 alias bootstrap="vim ~/repos/dotfiles/bootstrap_arch.sh"
 alias dun='f() { task done $1 && wut };f'
 alias yep='f() { task start $1 && wut };f'
 alias standup='{echo \`\`\`DONE && task did end.after:yesterday && echo TODO && wut && echo \`\`\`} | xclip -sel clip -i'
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+alias extip='curl https://jsonip.com | jq '.ip' | sed s/\"//g | xclip -in -selection clipboard'
+
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GO111MODULE=off
