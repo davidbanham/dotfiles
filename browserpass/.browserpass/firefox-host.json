@@ -1,9 +1,0 @@
-{
-  "name": "com.dannyvankooten.browserpass",
-  "description": "Browserpass binary for the Firefox extension",
-  "path": "%%replace%%",
-  "type": "stdio",
-  "allowed_extensions": [
-    "browserpass@maximbaz.com"
-  ]
-}
