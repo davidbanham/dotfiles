@@ -119,9 +119,6 @@ eval "$(direnv hook zsh)"
 
 alias monon="~/.screenlayout/home.sh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/davidbanham/.google-cloud-sdk/path.zsh.inc' ]; then source '/home/davidbanham/.google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 #if [ -f '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc' ]; then source '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc'; fi
 
@@ -143,4 +140,9 @@ alias extip='curl https://jsonip.com | jq '.ip' | sed s/\"//g | xclip -in -selec
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export GO111MODULE=off
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/davidbanham/google-cloud-sdk/path.zsh.inc' ]; then . '/home/davidbanham/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/davidbanham/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/davidbanham/google-cloud-sdk/completion.zsh.inc'; fi
