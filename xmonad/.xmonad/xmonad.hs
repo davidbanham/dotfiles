@@ -22,6 +22,7 @@ import XMonad.Layout.Maximize
 
 import XMonad.Layout.Gaps -- I don't think this will be required once I'm on a recent version of XFCE
 import XMonad.Layout.ThreeColumns
+import XMonad.Layout.NoBorders
 
 
 -- The preferred terminal program, which is used in a binding below and by
@@ -204,7 +205,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = maximize (tiled) ||| Mirror tiled ||| Full ||| Mirror ( ThreeCol 1 (3/100) (1/2))
+myLayout = maximize (tiled) ||| Mirror tiled ||| Full ||| Mirror ( ThreeCol 1 (3/100) (1/2)) ||| noBorders Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
