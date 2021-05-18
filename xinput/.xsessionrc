@@ -1,2 +1,3 @@
 # Logitech MX Ergo sensitivity
 xinput set-prop 18 "Device Accel Velocity Scaling" 150
+setxkbmap -option caps:escape
