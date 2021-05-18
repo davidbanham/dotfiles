@@ -1,31 +1,36 @@
 [general]
-pythonfile = /home/davidbanham/.config/offlineimap/get_pass.py
-#, Personal
-accounts = Personal
+# List of accounts to be synced, separated by a comma.
+accounts = main
 
-[Account Personal]
-localrepository = Local
-remoterepository = Remote
+[Account main]
+# Identifier for the local repository; e.g. the maildir to be synced via IMAP.
+localrepository = main-local
+# Identifier for the remote repository; i.e. the actual IMAP, usually non-local.
+remoterepository = gmail-remote
+default_backend = sqlite
+autorefresh = 5
+quick = 24
 
-[Account Prismatik]
-localrepository = PrismatikLocal
-remoterepository = PrismatikRemote
+[Repository main-local]
+# OfflineIMAP supports Maildir, GmailMaildir, and IMAP for local repositories.
+type = GmailMaildir
+# Where should the mail be placed?
+localfolders = ~/mail
 
-[Repository Local]
-type = Maildir
-localfolders = ~/Mail/Personal
-
-[Repository Remote]
+[Repository gmail-remote]
 type = Gmail
 remoteuser = david@banham.id.au
+remotepass = mbwegwwbskdayxpz
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
+# Necessary as of OfflineIMAP 6.5.4
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
-remotepasseval = get_pw()
+# Necessary to work around https://github.com/OfflineIMAP/offlineimap/issues/573 (versions 7.0.12, 7.2.1)
+ssl_version = tls1_2
 
-[Repository PrismatikLocal]
-type = Maildir
-localfolders = ~/Mail/Prismatik
-
-[Repository PrismatikRemote]
-type = Gmail
-remoteuser = david@prismatik.com.au
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
