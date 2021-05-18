@@ -1,0 +1,52 @@
+{
+    "coc.preferences.colorSupport": false,
+    "diagnostic.checkCurrentLine": true,
+    "languageserver": {
+        "go": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "trace.server": "verbose",
+            "filetypes": [
+                "go"
+            ]
+        },
+        "sql": {
+            "command": "sql-language-server",
+            "args": [
+                "up",
+                "--method",
+                "stdio"
+            ],
+            "filetypes": [
+                "sql",
+                "mysql"
+            ]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh"
+            ],
+            "ignoredRootPaths": [
+                "~"
+            ]
+        },
+        "cmake": {
+            "command": "cmake-language-server",
+            "filetypes": [
+                "cmake"
+            ],
+            "rootPatterns": [
+                "build/"
+            ],
+            "initializationOptions": {
+                "buildDirectory": "build"
+            }
+        }
+    }
+}

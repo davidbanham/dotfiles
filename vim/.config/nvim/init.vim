@@ -3,6 +3,7 @@ if has('nvim')
 else
   call plug#begin('~/.vim/plugged')
 endif
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'digitaltoad/vim-jade'
 Plug 'pangloss/vim-javascript'
@@ -30,15 +31,11 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ }
 Plug 'junegunn/fzf'
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'iCyMind/NeoSolarized'
 else
-  Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'majutsushi/tagbar'
 Plug 'freitass/todo.txt-vim'
 Plug 'jremmen/vim-ripgrep'
@@ -171,10 +168,10 @@ tnoremap <Esc> <C-\><C-n>
 
 highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-
-call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+"let g:deoplete#enable_at_startup = 1
+"
+"call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
+"call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
