@@ -35,3 +35,12 @@
 [submodule "aur/nomachine"]
 	path = aur/nomachine
 	url = https://aur.archlinux.org/nomachine.git
+[submodule "aur/rstudio-server-git"]
+	path = aur/rstudio-server-git
+	url = https://aur.archlinux.org/rstudio-server-git.git
+[submodule "aur/soci"]
+	path = aur/soci
+	url = https://aur.archlinux.org/soci.git
+[submodule "aur/rstudio-desktop-bin"]
+	path = aur/rstudio-desktop-bin
+	url = https://aur.archlinux.org/rstudio-desktop-bin.git
