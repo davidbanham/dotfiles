@@ -1,4 +1,8 @@
 #[[ $TERM != "screen" ]] && exec tmux
+if [ -z "$TMUX" ] && [ ${UID} != 0 ]
+then
+    tmux new-session -A -s main
+fi
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/davidbanham/.oh-my-zsh
@@ -56,7 +60,9 @@ bindkey -v #vim mode
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+)
 
 # User configuration
 
@@ -103,10 +109,6 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 PATH="/home/davidbanham/.cargo/bin:$PATH"
 
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
 alias vimdiff="vim -d"
 export GOPATH="/home/davidbanham/go"
 
@@ -118,9 +120,6 @@ eval "$(direnv hook zsh)"
 [ -f /home/davidbanham/.travis/travis.sh ] && source /home/davidbanham/.travis/travis.sh
 
 alias monon="~/.screenlayout/home.sh"
-
-# The next line enables shell command completion for gcloud.
-#if [ -f '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc' ]; then source '/home/davidbanham/.google-cloud-sdk/completion.zsh.inc'; fi
 
 alias cpass="pass -c"
 
@@ -138,11 +137,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 alias extip='curl https://jsonip.com | jq '.ip' | sed s/\"//g | xclip -in -selection clipboard'
 
 export GOROOT=/usr/lib/go
-export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+#export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/davidbanham/google-cloud-sdk/path.zsh.inc' ]; then . '/home/davidbanham/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/davidbanham/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/davidbanham/google-cloud-sdk/completion.zsh.inc'; fi
