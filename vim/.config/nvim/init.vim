@@ -5,26 +5,23 @@ else
 endif
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
-Plug 'digitaltoad/vim-jade'
+"Plug 'digitaltoad/vim-jade'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'kchmck/vim-coffee-script'
+"Plug 'mxw/vim-jsx'
+"Plug 'kchmck/vim-coffee-script'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-obsession'
-Plug 'shime/vim-livedown'
+"Plug 'shime/vim-livedown'
 Plug 'Raimondi/vim-yaml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ElmCast/elm-vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
-Plug 'jceb/vim-orgmode'
+"Plug 'jceb/vim-orgmode'
 "Plug 'vimwiki/vimwiki' , { 'branch': 'dev' }
 Plug 'SirVer/ultisnips'
-Plug 'tbabej/taskwiki'
 Plug 'powerman/vim-plugin-AnsiEsc'
-Plug 'majutsushi/tagbar'
-Plug 'farseer90718/vim-taskwarrior'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -37,7 +34,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'majutsushi/tagbar'
-Plug 'freitass/todo.txt-vim'
+"Plug 'freitass/todo.txt-vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'leafgarland/typescript-vim'
 Plug '~/.fzf'
@@ -198,8 +195,6 @@ set foldmethod=indent
 au BufNewFile,BufRead * normal zR
 
 hi Folded ctermbg=Black
-
-au VimLeave *.wiki !task sync
 
 au BufNewFile,BufRead *.rs :compiler cargo
 au BufNewFile,BufRead *.rs nmap <leader>t :make build<CR>:copen<CR>
