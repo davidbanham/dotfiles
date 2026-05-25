@@ -22,3 +22,5 @@
  smtpuser = david@banham.id.au
  smtpencryption = tls
  smtpserverport = 587
+[branch]
+	sort = committerdate
