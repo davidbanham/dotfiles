@@ -44,3 +44,6 @@
 [submodule "aur/rstudio-desktop-bin"]
 	path = aur/rstudio-desktop-bin
 	url = https://aur.archlinux.org/rstudio-desktop-bin.git
+[submodule "sway/.config/sway/swaymonad"]
+	path = sway/.config/sway/swaymonad
+	url = https://github.com/nicolasavru/swaymonad
