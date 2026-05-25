@@ -12,18 +12,6 @@
                 "go"
             ]
         },
-        "sql": {
-            "command": "sql-language-server",
-            "args": [
-                "up",
-                "--method",
-                "stdio"
-            ],
-            "filetypes": [
-                "sql",
-                "mysql"
-            ]
-        },
         "bash": {
             "command": "bash-language-server",
             "args": [
