@@ -41,7 +41,7 @@ bindkey -v #vim mode
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -66,7 +66,7 @@ plugins=(
 
 # User configuration
 
-export PATH="/home/davidbanham/.bin:/usr/local/go/bin:/home/davidbanham/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/davidbanham/go/bin:/home/davidbanham/.gem/ruby/2.6.0/bin"
+export PATH="/home/davidbanham/.bin:/usr/local/go/bin:/home/davidbanham/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/davidbanham/go/bin:/home/davidbanham/.gem/ruby/2.6.0/bin"
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/.local/bin/:$PATH
 export PATH="$PATH:/opt/mssql-tools/bin"
@@ -140,3 +140,9 @@ export GOROOT=/usr/lib/go
 export GOBIN=$GOPATH/bin
 #export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+source /etc/profile.d/google-cloud-cli.sh
+
+alias unwip='git reset HEAD~'
+
+alias hardcopy='lp -d battleship'
