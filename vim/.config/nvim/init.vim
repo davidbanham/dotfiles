@@ -46,6 +46,8 @@ let g:livedown_autorun = 1
 let g:livedown_open = 1
 let g:livedown_port = 1337
 
+let mapleader="\<Space>"
+
 set number " show line numbers
 hi LineNr term=bold cterm=NONE ctermfg=LightGrey ctermbg=NONE gui=NONE guifg=LightGrey guibg=NONE
 nnoremap <F2> :set nonumber!<CR>
@@ -60,7 +62,6 @@ set ttyfast
 if has("syntax")
   syntax on
 endif
-set pastetoggle=<F3>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
@@ -172,6 +173,11 @@ highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
 
 let g:go_fmt_command = "goimports"
 let g:go_auto_type_info = 1
+"let g:go_term_enabled = 1
+"let g:go_term_reuse = 1
+"let g:go_term_close_on_exit = 0
+"let g:go_term_height = 30
+"let g:go_term_mode = "below 5split"
 
 function! RangeSearch(direction)
   call inputsave()
@@ -199,6 +205,8 @@ hi Folded ctermbg=Black
 au BufNewFile,BufRead *.rs :compiler cargo
 au BufNewFile,BufRead *.rs nmap <leader>t :make build<CR>:copen<CR>
 au BufNewFile,BufRead *.go nmap <leader>t :GoTest<CR>
+au BufNewFile,BufRead *.go nmap <leader>g :GoTestFunc<CR>
+au BufNewFile,BufRead *.go nmap <leader>a :GoAlternate<CR> "Open corresponding test/source file
 au BufNewFile,BufRead *.rs nmap <leader>t :RustTest!<CR>
 nmap <leader>n :cnext<CR>
 
@@ -227,8 +235,8 @@ imap <C-v> <esc>"+gp
 
 set termguicolors
 if has('nvim')
-  colorscheme NeoSolarized
-  set background=light
+	colorscheme NeoSolarized
+	set background=light
 endif
 
 nmap <leader>f :FZF<CR>
@@ -237,7 +245,6 @@ highlight LineNr guibg=base00
 
 set nohlsearch
 
-let mapleader="\<Space>"
 nnoremap <leader>* :%s/\<<c-r><c-w>\>//g<left><left>
 
 nmap <leader>w :s/\(<c-r>=expand("<cWORD>")<cr>\)/
@@ -252,3 +259,5 @@ set foldlevel=99
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+au BufReadPost *.html set syntax=gohtmltmpl
