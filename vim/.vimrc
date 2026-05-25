@@ -233,11 +233,11 @@ set undofile
 vmap <C-c> "+y
 imap <C-v> <esc>"+gp
 
-set termguicolors
-if has('nvim')
-  colorscheme NeoSolarized
-  set background=light
-endif
+#set termguicolors
+#if has('nvim')
+  #colorscheme NeoSolarized
+  #set background=light
+#endif
 
 nmap <leader>f :FZF<CR>
 
