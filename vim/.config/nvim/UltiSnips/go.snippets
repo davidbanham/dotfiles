@@ -1,3 +1,9 @@
-snippet wtf "debug" b
-log.Printf(\`DEBUG ${1:varname}: %+v\`, $1)
+snippet wtf "debug multiple values" b
+log.Println("DEBUG$2", "$1", `!p
+vars = [v.strip() for v in t[1].split(',')]
+if len(vars) == 1:
+	snip.rv = ', '.join([f"fmt.Sprintf(\`|%+v|\`, {v})" for v in vars if v])
+else:
+	snip.rv = ', '.join([f"fmt.Sprintf(\`|{v}: %+v|\`, {v})" for v in vars if v])
+`);
 endsnippet
