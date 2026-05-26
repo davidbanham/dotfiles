@@ -7,3 +7,7 @@ else:
 	snip.rv = ', '.join([f"fmt.Sprintf(\`|{v}: %+v|\`, {v})" for v in vars if v])
 `);
 endsnippet
+
+snippet rwe "return wrapped error"
+return ${3}fmt.Errorf("${1:message}: %w", ${2:err});
+endsnippet
